@@ -1,0 +1,8 @@
+package com.mokhir.dev.ATM.aggregate.enums;
+
+public enum BanknoteType {
+    ONE, FIVE, TEN, TWENTY, FIFTY, HUNDRED,
+    ONE_HUNDRED_THOUSAND, TWO_HUNDRED_THOUSAND,
+    FIVE_THOUSAND, TEN_THOUSAND, TWENTY_THOUSAND,
+    FIFTY_THOUSAND
+}
