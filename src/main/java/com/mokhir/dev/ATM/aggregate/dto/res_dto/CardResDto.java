@@ -1,5 +1,6 @@
 package com.mokhir.dev.ATM.aggregate.dto.res_dto;
 
+import com.mokhir.dev.ATM.aggregate.dto.req_dto.CardHolderReqDto;
 import com.mokhir.dev.ATM.aggregate.entity.CardHolder;
 import com.mokhir.dev.ATM.aggregate.entity.CardType;
 import lombok.*;
@@ -17,6 +18,6 @@ public class CardResDto implements Serializable {
     private static final long serialVersionUID = 5450761978182490663L;
     private Double balance;
     private String cardNumber;
-    private CardHolder user;
-    private CardType cardType;
+    private CardHolderResDto user;
+    private CardTypeResDto cardType;
 }

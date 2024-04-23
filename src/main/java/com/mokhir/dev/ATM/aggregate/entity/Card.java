@@ -4,9 +4,11 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 import lombok.*;
+import org.springframework.format.annotation.NumberFormat;
 
 import java.io.Serial;
 import java.io.Serializable;
+import java.time.LocalDate;
 
 @Data
 @ToString
@@ -14,6 +16,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Entity
 @Builder
+@Table(name = "card")
 public class Card implements Serializable {
     @Serial
     private static final long serialVersionUID = -7330543945961999344L;
@@ -21,42 +24,43 @@ public class Card implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull(message = "checkCardQuantity must not be empty")
     @Column(columnDefinition = "int default 3")
     private Integer checkCardQuantity;
 
-    @Positive(message = "Balance must have positive value")
+    @NotNull(message = "balance must not be empty")
     @Column(columnDefinition = "double default 0.0")
+    @Min(value = 0, message = "Balance cannot be less than zero")
     private Double balance;
 
-    @NotNull
-    @Size(min = 3, max = 4, message = "CVC must be from 3 to 4 symbols")
-    private String card_cvc;
+    @NotNull(message = "card cvc must not be empty")
+    @Size(min = 3, max = 3, message = "CVC must be 3 symbols")
+    private String cardCvc;
 
-    @NotNull
-    @Pattern(regexp = "\\d{4}-\\d{2}", message = "Неправильный формат даты и времени")
+    @NotNull(message = "cardExpireDate must not be empty")
+    @Pattern(regexp = "\\d{4}-\\d{2}", message = "Incorrect date and time format")
     @JsonFormat(pattern = "yyyy-MM", timezone = "Asia/Tashkent")
-    private String card_expire_date;
+    private LocalDate cardExpireDate;
 
-    @NotNull
+    @NumberFormat
+    @NotNull(message = "card number must not be empty")
     @Column(unique = true, nullable = false)
-    @JsonFormat(locale = "card_number")
+    @Size(min = 16, max = 16)
     private String cardNumber;
 
-    @NotNull
-    @Size(min = 4, max = 4, message = "Пин-код должен быть длиной 4 символа")
-    private String card_pin;
+    private Integer cardPin;
 
-    @NotNull
+    @NotNull(message = "card must be true by default")
     @Column(columnDefinition = "boolean default true")
-    private Boolean is_active;
+    private Boolean isActive;
 
-    @NotNull(message = "User have to value")
     @ManyToOne
+    @NotNull(message = "User have to value")
     @JoinColumn(name = "cardholder_id")
     private CardHolder user;
 
-    @NotNull(message = "Type of card must not be empty")
     @ManyToOne
+    @NotNull(message = "Type of card must not be empty")
     @JoinColumn(name = "card_type_id")
     private CardType cardType;
 }

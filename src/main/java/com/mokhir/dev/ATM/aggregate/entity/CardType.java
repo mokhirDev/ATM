@@ -12,17 +12,21 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Builder
 @Entity
+@Table(uniqueConstraints = {
+        @UniqueConstraint(columnNames = {"name", "number"})
+})
 public class CardType implements Serializable {
     @Serial
-    private static final long serialVersionUID = 2064366164899764844L;
+    private static final long serialVersionUID = -3322182684770442620L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(unique = true, nullable = false)
     private String name;
-    private String description;
-    private Integer number;
-    private Integer expiration_year;
+    @Column(unique = true, nullable = false)
+    private String number;
     @ManyToOne
     @JoinColumn(name = "currency_type_id")
     private CurrencyType currencyType;
+    private Integer expirationYear;
 }

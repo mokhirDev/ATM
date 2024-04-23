@@ -1,5 +1,6 @@
 package com.mokhir.dev.ATM.aggregate.dto.req_dto;
 
+import jakarta.persistence.Column;
 import jakarta.validation.constraints.*;
 import lombok.*;
 
@@ -19,10 +20,12 @@ public class CardHolderReqDto implements Serializable {
     private String address;
 
     @NotNull(message = "Date of birth must not be empty")
+    @Past(message = "Date of birth must be in the past")
     private LocalDate birthDate;
 
     @NotBlank(message = "Email must not be empty")
     @Email(message = "Incorrect email format")
+    @Column(unique = true)
     private String email;
 
     @NotBlank(message = "The name must not be empty")
@@ -32,9 +35,12 @@ public class CardHolderReqDto implements Serializable {
     private String lastName;
 
     @NotNull(message = "Passport number must not be empty")
-    private Integer passportNumber;
+    @Size(min = 7, max = 7, message = "Passport number must be exactly 7 numbers long")
+    @Pattern(regexp = "\\d{7}", message = "PIN FL must contain only digits")
+    private Long passportNumber;
 
     @NotBlank(message = "The passport series must not be empty")
+    @Pattern(regexp = "[a-zA-Z]{2}", message = "The passport series must contain exactly two letters")
     private String passportSeries;
 
     @NotBlank(message = "Phone number must have value")
@@ -42,6 +48,7 @@ public class CardHolderReqDto implements Serializable {
     private String phoneNumber;
 
     @NotBlank(message = "PIN FL must not be empty")
-    @Size(min = 14, max = 14)
+    @Size(min = 14, max = 14, message = "PIN FL must be exactly 14 digits long")
+    @Pattern(regexp = "\\d{14}", message = "PIN FL must contain only digits")
     private String pinFl;
 }

@@ -17,7 +17,7 @@ public class CardHolderController {
 
     @PostMapping("/create")
     public ResponseEntity<CardHolderResDto> createCardHolder(
-            @Valid @RequestBody CardHolderReqDto cardHolderReqDto,
+            @RequestBody CardHolderReqDto cardHolderReqDto,
             HttpServletRequest request) {
         return ResponseEntity.ok().body(cardHolderService.createCardHolder(cardHolderReqDto, request));
     }

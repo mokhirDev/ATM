@@ -33,8 +33,10 @@ public class CardHolderService implements CardHolderServiceInterface<CardHolderR
             LOG.info("Client host : \t\t {}", gson.toJson(ClientInfo));
             LOG.info("Client IP :  \t\t {}", gson.toJson(ClientIP));
             CardHolder entity = cardHolderMapper.toEntity(cardHolderReqDto);
-            CardHolder save = cardHolderRepository.save(entity);
-            return cardHolderMapper.toDto(save);
+            String passportInfo = entity.getPassportSeries()+entity.getPassportNumber();
+            entity.setPassportInfo(passportInfo);
+            cardHolderRepository.save(entity);
+            return cardHolderMapper.toDto(entity);
         } catch (Exception ex) {
             LOG.error("CardHolderService: createCardHolder: {}", ex.getMessage());
             throw new DatabaseException("CardHolderService: createCardHolder: " + ex.getMessage());
