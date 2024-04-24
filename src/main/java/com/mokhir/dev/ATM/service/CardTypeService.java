@@ -13,6 +13,7 @@ import com.mokhir.dev.ATM.repository.CurrencyTypeRepository;
 import com.mokhir.dev.ATM.service.interfacies.CardTypeInterface;
 import com.mokhir.dev.ATM.service.network.NetworkDataService;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.validation.ConstraintViolationException;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,29 +35,30 @@ public class CardTypeService implements CardTypeInterface<CardTypeReqDto, CardTy
 
     @Override
     public CardTypeResDto create(CardTypeReqDto cardTypeReqDto, HttpServletRequest servletRequest) {
-       try {
-           String ClientInfo = networkDataService.getClientIPv4Address(servletRequest);
-           String ClientIP = networkDataService.getRemoteUserInfo(servletRequest);
-           LOG.info("Client host : \t\t {}", gson.toJson(ClientInfo));
-           LOG.info("Client IP :  \t\t {}", gson.toJson(ClientIP));
+        try {
+            String ClientInfo = networkDataService.getClientIPv4Address(servletRequest);
+            String ClientIP = networkDataService.getRemoteUserInfo(servletRequest);
+            LOG.info("Client host : \t\t {}", gson.toJson(ClientInfo));
+            LOG.info("Client IP :  \t\t {}", gson.toJson(ClientIP));
 
-           CardType entity = cardTypeMapper.toEntity(cardTypeReqDto);
-           Long id = cardTypeReqDto.getCurrencyTypeId();
-           Optional<CurrencyType> byId = currencyTypeRepository.findById(id);
-           if (byId.isEmpty()){
-               throw new NotFoundException("Currency type not found, with id:%d".formatted(id));
-           }
-           CurrencyType currencyType = byId.get();
-           entity.setCurrencyType(currencyType);
-           entity.setName(entity.getName().toUpperCase());
-           CardType save = cardTypeRepository.save(entity);
-           return cardTypeMapper.toDto(save);
-       }catch (DataIntegrityViolationException ex){
-           throw new DataIntegrityViolationException(ex.getMessage(), ex.getCause());
-       }
-       catch (Exception ex) {
-           LOG.error("CardTypeService: create: {}", ex.getMessage());
-           throw new DatabaseException("CardTypeService: create: " + ex.getMessage());
-       }
+            CardType entity = cardTypeMapper.toEntity(cardTypeReqDto);
+            Long id = cardTypeReqDto.getCurrencyTypeId();
+            Optional<CurrencyType> byId = currencyTypeRepository.findById(id);
+            if (byId.isEmpty()) {
+                throw new NotFoundException("Currency type not found, with id:%d".formatted(id));
+            }
+            CurrencyType currencyType = byId.get();
+            entity.setCurrencyType(currencyType);
+            entity.setName(entity.getName().toUpperCase());
+            CardType save = cardTypeRepository.save(entity);
+            return cardTypeMapper.toDto(save);
+        } catch (DataIntegrityViolationException ex) {
+            throw new DataIntegrityViolationException(ex.getMessage(), ex.getCause());
+        }catch (ConstraintViolationException ex){
+            throw new ConstraintViolationException(ex.getConstraintViolations());
+        } catch (Exception ex) {
+            LOG.error("CardTypeService: create: {}", ex.getMessage());
+            throw new DatabaseException("CardTypeService: create: " + ex.getMessage());
+        }
     }
 }

@@ -18,6 +18,6 @@ public class CardResDto implements Serializable {
     private static final long serialVersionUID = 5450761978182490663L;
     private Double balance;
     private String cardNumber;
-    private CardHolderResDto user;
+    private CardHolderResDto cardHolder;
     private CardTypeResDto cardType;
 }

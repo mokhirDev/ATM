@@ -15,10 +15,18 @@ import org.springframework.web.bind.annotation.*;
 public class CardHolderController {
     private final CardHolderService cardHolderService;
 
-    @PostMapping("/create")
+    @PostMapping
     public ResponseEntity<CardHolderResDto> createCardHolder(
-            @RequestBody CardHolderReqDto cardHolderReqDto,
+            @Valid @RequestBody CardHolderReqDto cardHolderReqDto,
             HttpServletRequest request) {
         return ResponseEntity.ok().body(cardHolderService.createCardHolder(cardHolderReqDto, request));
+    }
+
+    @PutMapping
+    public ResponseEntity<CardHolderResDto> updateCardHolder(
+            @RequestBody CardHolderReqDto updateDto,
+            HttpServletRequest request
+            ){
+        return ResponseEntity.ok().body(cardHolderService.updateCardHolder(updateDto, request));
     }
 }

@@ -17,13 +17,11 @@ public class CardReqDto implements Serializable {
 
     @NotNull(message = "Please create a PIN code")
     @Size(min = 4, max = 4, message = "The PIN code must be 4 characters long")
-    private Integer cardPin;
+    private String cardPin;
 
     @NotNull(message = "User have to id")
-    @NumberFormat
     private Long userId;
 
     @NotNull(message = "User have to id")
-    @NumberFormat
     private Long cardTypeId;
 }
