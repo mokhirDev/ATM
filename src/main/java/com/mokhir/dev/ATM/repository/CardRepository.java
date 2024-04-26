@@ -10,4 +10,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CardRepository extends JpaRepository<Card, Long> {
     Page<Card> findAllCardsByCardHolder(CardHolder cardHolder, Pageable pageable);
+    Card findByCardNumber(String cardNumber);
 }

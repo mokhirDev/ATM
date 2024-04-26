@@ -14,6 +14,8 @@ import java.io.Serializable;
 public class CardReqDto implements Serializable {
     @Serial
     private static final long serialVersionUID = -612968067558184215L;
+    @Positive(message = "ID must be a positive number")
+    private Long id;
 
     @NotNull(message = "Please create a PIN code")
     @Size(min = 4, max = 4, message = "The PIN code must be 4 characters long")

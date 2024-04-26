@@ -1,6 +1,6 @@
 package com.mokhir.dev.ATM.exceptions.controller;
 
-import com.mokhir.dev.ATM.exceptions.ApiControllerException;
+import com.mokhir.dev.ATM.exceptions.*;
 import com.mokhir.dev.ATM.service.CardService;
 import jakarta.validation.ConstraintViolationException;
 import jakarta.validation.UnexpectedTypeException;
@@ -8,9 +8,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
-import com.mokhir.dev.ATM.exceptions.DatabaseException;
-import com.mokhir.dev.ATM.exceptions.ErrorResponse;
-import com.mokhir.dev.ATM.exceptions.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MissingPathVariableException;
@@ -104,9 +101,34 @@ public class ExceptionController {
     }
 
     @ExceptionHandler(MissingPathVariableException.class)
-    public ResponseEntity<ErrorResponse> handleMissingPathVariable(MissingPathVariableException ex) {
+    public ResponseEntity<ErrorResponse> on(MissingPathVariableException ex) {
         LOG.error("MissingPathVariableException: {} ", ex.getMessage());
         String errorMessage = "Required URI template variable '" + ex.getVariableName() + "' is not present";
+        ErrorResponse errorResponse = new ErrorResponse(
+                HttpStatus.BAD_REQUEST.value(),
+                errorMessage,
+                ex.getMessage());
+        return ResponseEntity.status(errorResponse.getCode()).body(errorResponse);
+    }
+
+    @ExceptionHandler(NotEnoughFundsException.class)
+    public ResponseEntity<ErrorResponse> on(NotEnoughFundsException ex) {
+        LOG.error("NotEnoughFundsException: {} ", ex.getMessage());
+        String errorMessage = "In Atm not enough required cashes, please try again! "
+                + ex.getMessage();
+        ErrorResponse errorResponse = new ErrorResponse(
+                HttpStatus.BAD_REQUEST.value(),
+                errorMessage,
+                ex.getMessage());
+        return ResponseEntity.status(errorResponse.getCode()).body(errorResponse);
+    }
+
+
+    @ExceptionHandler(CardBlockedException.class)
+    public ResponseEntity<ErrorResponse> on(CardBlockedException ex) {
+        LOG.error("CardBlockedException: {} ", ex.getMessage());
+        String errorMessage = "Current card is blocked"
+                + ex.getMessage();
         ErrorResponse errorResponse = new ErrorResponse(
                 HttpStatus.BAD_REQUEST.value(),
                 errorMessage,

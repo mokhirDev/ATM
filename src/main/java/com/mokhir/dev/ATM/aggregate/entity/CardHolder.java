@@ -59,7 +59,7 @@ public class CardHolder implements Serializable {
 
     @NotBlank(message = "PIN FL must not be empty")
     @Size(min = 14, max = 14, message = "PIN FL must be exactly 14 digits long")
-    @Pattern(regexp = "\\d{14}", message = "PIN FL must contain only digits")
+    @Pattern(regexp = "\\d+", message = "PIN FL must contain only positive digits")
     @Column(unique = true)
     private String pinFl;
 }

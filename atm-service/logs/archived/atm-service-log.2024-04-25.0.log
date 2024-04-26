@@ -1,0 +1,1074 @@
+2024-04-25 09:30:53 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 3936 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-25 09:30:53 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-25 09:30:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-25 09:30:55 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 96 ms. Found 4 JPA repository interfaces.
+2024-04-25 09:30:56 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-25 09:30:56 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-25 09:30:56 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-25 09:30:56 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-25 09:30:56 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2246 ms
+2024-04-25 09:30:57 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-25 09:30:57 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-25 09:30:57 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4005e485
+2024-04-25 09:30:57 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-25 09:30:59 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 09:31:00 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-25 09:31:00 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 11 mappings in 'requestMappingHandlerMapping'
+2024-04-25 09:31:00 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-25 09:31:00 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-25 09:31:00 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-25 09:31:00 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-25 09:31:00 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 7.831 seconds (process running for 10.103)
+2024-04-25 09:55:44 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-25 09:55:44 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-25 09:55:44 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-25 09:55:44 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-25 09:55:44 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-25 09:55:44 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@71f86562
+2024-04-25 09:55:44 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@72c29d87
+2024-04-25 09:55:44 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-25 09:55:44 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2024-04-25 09:55:44 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - PUT "/api/v1/currency/type", parameters={}
+2024-04-25 09:55:44 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CurrencyTypeController#updateById(CurrencyTypeReqDto, HttpServletRequest)
+2024-04-25 09:55:44 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CurrencyTypeReqDto(id=3, name=3в)]
+2024-04-25 09:55:44 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(MethodArgumentNotValidException)
+2024-04-25 09:55:44 [http-nio-8080-exec-1] ERROR c.mokhir.dev.ATM.service.CardService - MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.mokhir.dev.ATM.aggregate.dto.res_dto.CurrencyTypeResDto> com.mokhir.dev.ATM.controller.CurrencyTypeController.updateById(com.mokhir.dev.ATM.aggregate.dto.req_dto.CurrencyTypeReqDto,jakarta.servlet.http.HttpServletRequest) with 2 errors: [Field error in object 'currencyTypeReqDto' on field 'name': rejected value [3в]; codes [Pattern.currencyTypeReqDto.name,Pattern.name,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [currencyTypeReqDto.name,name]; arguments []; default message [name],[Ljakarta.validation.constraints.Pattern$Flag;@3227e1f7,[a-zA-Z]{3}]; default message [The string must contain exactly three digits]] [Field error in object 'currencyTypeReqDto' on field 'name': rejected value [3в]; codes [Size.currencyTypeReqDto.name,Size.name,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [currencyTypeReqDto.name,name]; arguments []; default message [name],3,3]; default message [Currency type must be 3 length]]  
+2024-04-25 09:55:44 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 09:55:44 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Error in validation: The string must contain exactly three digits: f (truncated)...]
+2024-04-25 09:55:44 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.mokhir.dev.ATM.aggregate.dto.res_dto.CurrencyTypeResDto> com.mokhir.dev.ATM.controller.CurrencyTypeController.updateById(com.mokhir.dev.ATM.aggregate.dto.req_dto.CurrencyTypeReqDto,jakarta.servlet.http.HttpServletRequest) with 2 errors: [Field error in object 'currencyTypeReqDto' on field 'name': rejected value [3в]; codes [Pattern.currencyTypeReqDto.name,Pattern.name,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [currencyTypeReqDto.name,name]; arguments []; default message [name],[Ljakarta.validation.constraints.Pattern$Flag;@3227e1f7,[a-zA-Z]{3}]; default message [The string must contain exactly three digits]] [Field error in object 'currencyTypeReqDto' on field 'name': rejected value [3в]; codes [Size.currencyTypeReqDto.name,Size.name,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [currencyTypeReqDto.name,name]; arguments []; default message [name],3,3]; default message [Currency type must be 3 length]] ]
+2024-04-25 09:55:44 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-25 09:55:55 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - PUT "/api/v1/currency/type", parameters={}
+2024-04-25 09:55:55 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CurrencyTypeController#updateById(CurrencyTypeReqDto, HttpServletRequest)
+2024-04-25 09:55:55 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CurrencyTypeReqDto(id=3, name=sdfgs)]
+2024-04-25 09:55:55 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(MethodArgumentNotValidException)
+2024-04-25 09:55:55 [http-nio-8080-exec-4] ERROR c.mokhir.dev.ATM.service.CardService - MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.mokhir.dev.ATM.aggregate.dto.res_dto.CurrencyTypeResDto> com.mokhir.dev.ATM.controller.CurrencyTypeController.updateById(com.mokhir.dev.ATM.aggregate.dto.req_dto.CurrencyTypeReqDto,jakarta.servlet.http.HttpServletRequest) with 2 errors: [Field error in object 'currencyTypeReqDto' on field 'name': rejected value [sdfgs]; codes [Pattern.currencyTypeReqDto.name,Pattern.name,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [currencyTypeReqDto.name,name]; arguments []; default message [name],[Ljakarta.validation.constraints.Pattern$Flag;@3227e1f7,[a-zA-Z]{3}]; default message [The string must contain exactly three digits]] [Field error in object 'currencyTypeReqDto' on field 'name': rejected value [sdfgs]; codes [Size.currencyTypeReqDto.name,Size.name,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [currencyTypeReqDto.name,name]; arguments []; default message [name],3,3]; default message [Currency type must be 3 length]]  
+2024-04-25 09:55:55 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 09:55:55 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Error in validation: The string must contain exactly three digits: f (truncated)...]
+2024-04-25 09:55:55 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.mokhir.dev.ATM.aggregate.dto.res_dto.CurrencyTypeResDto> com.mokhir.dev.ATM.controller.CurrencyTypeController.updateById(com.mokhir.dev.ATM.aggregate.dto.req_dto.CurrencyTypeReqDto,jakarta.servlet.http.HttpServletRequest) with 2 errors: [Field error in object 'currencyTypeReqDto' on field 'name': rejected value [sdfgs]; codes [Pattern.currencyTypeReqDto.name,Pattern.name,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [currencyTypeReqDto.name,name]; arguments []; default message [name],[Ljakarta.validation.constraints.Pattern$Flag;@3227e1f7,[a-zA-Z]{3}]; default message [The string must contain exactly three digits]] [Field error in object 'currencyTypeReqDto' on field 'name': rejected value [sdfgs]; codes [Size.currencyTypeReqDto.name,Size.name,Size.java.lang.String,Size]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [currencyTypeReqDto.name,name]; arguments []; default message [name],3,3]; default message [Currency type must be 3 length]] ]
+2024-04-25 09:55:55 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-25 09:56:01 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - PUT "/api/v1/currency/type", parameters={}
+2024-04-25 09:56:01 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CurrencyTypeController#updateById(CurrencyTypeReqDto, HttpServletRequest)
+2024-04-25 09:56:01 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CurrencyTypeReqDto(id=3, name=null)]
+2024-04-25 09:56:01 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(MethodArgumentNotValidException)
+2024-04-25 09:56:01 [http-nio-8080-exec-6] ERROR c.mokhir.dev.ATM.service.CardService - MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.mokhir.dev.ATM.aggregate.dto.res_dto.CurrencyTypeResDto> com.mokhir.dev.ATM.controller.CurrencyTypeController.updateById(com.mokhir.dev.ATM.aggregate.dto.req_dto.CurrencyTypeReqDto,jakarta.servlet.http.HttpServletRequest): [Field error in object 'currencyTypeReqDto' on field 'name': rejected value [null]; codes [NotNull.currencyTypeReqDto.name,NotNull.name,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [currencyTypeReqDto.name,name]; arguments []; default message [name]]; default message [Currency type must not be empty]]  
+2024-04-25 09:56:01 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 09:56:01 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Error in validation: Currency type must not be empty: field name: na (truncated)...]
+2024-04-25 09:56:01 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.mokhir.dev.ATM.aggregate.dto.res_dto.CurrencyTypeResDto> com.mokhir.dev.ATM.controller.CurrencyTypeController.updateById(com.mokhir.dev.ATM.aggregate.dto.req_dto.CurrencyTypeReqDto,jakarta.servlet.http.HttpServletRequest): [Field error in object 'currencyTypeReqDto' on field 'name': rejected value [null]; codes [NotNull.currencyTypeReqDto.name,NotNull.name,NotNull.java.lang.String,NotNull]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [currencyTypeReqDto.name,name]; arguments []; default message [name]]; default message [Currency type must not be empty]] ]
+2024-04-25 09:56:01 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-25 09:56:05 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - PUT "/api/v1/currency/type", parameters={}
+2024-04-25 09:56:05 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CurrencyTypeController#updateById(CurrencyTypeReqDto, HttpServletRequest)
+2024-04-25 09:56:05 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CurrencyTypeReqDto(id=3, name=wer)]
+2024-04-25 09:56:05 [http-nio-8080-exec-8] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.200"
+2024-04-25 09:56:05 [http-nio-8080-exec-8] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-25 09:56:06 [http-nio-8080-exec-8] INFO  c.mokhir.dev.ATM.service.CardService - Updated successfully: CurrencyType(id=3, name=WER)
+2024-04-25 09:56:06 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 09:56:06 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CurrencyTypeResDto(id=3, name=WER)]
+2024-04-25 09:56:06 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-25 09:56:11 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - PUT "/api/v1/currency/type", parameters={}
+2024-04-25 09:56:11 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CurrencyTypeController#updateById(CurrencyTypeReqDto, HttpServletRequest)
+2024-04-25 09:56:11 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CurrencyTypeReqDto(id=3, name=uzs)]
+2024-04-25 09:56:11 [http-nio-8080-exec-9] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.200"
+2024-04-25 09:56:11 [http-nio-8080-exec-9] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-25 09:56:11 [http-nio-8080-exec-9] INFO  c.mokhir.dev.ATM.service.CardService - Updated successfully: CurrencyType(id=3, name=UZS)
+2024-04-25 09:56:11 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 09:56:11 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CurrencyTypeResDto(id=3, name=UZS)]
+2024-04-25 09:56:11 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-25 09:56:29 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/currency/type?page=0&size=4", parameters={masked}
+2024-04-25 09:56:29 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CurrencyTypeController#getAll(int, int, HttpServletRequest)
+2024-04-25 09:56:29 [http-nio-8080-exec-10] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.200"
+2024-04-25 09:56:29 [http-nio-8080-exec-10] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-25 09:56:30 [http-nio-8080-exec-10] INFO  c.mokhir.dev.ATM.service.CardService - CardTypeService: findAll: Page 1 of 1 containing com.mokhir.dev.ATM.aggregate.dto.res_dto.CurrencyTypeResDto instances
+2024-04-25 09:56:30 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 09:56:30 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 1 containing com.mokhir.dev.ATM.aggregate.dto.res_dto.CurrencyTypeResDto instances]
+2024-04-25 09:56:30 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-25 09:58:04 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/card/all/pnfl?page=0&size=10&pinFlNumber=30211991235463", parameters={masked}
+2024-04-25 09:58:04 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-25 09:58:04 [http-nio-8080-exec-3] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2024-04-25 09:58:04 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/card/all/pnfl.]
+2024-04-25 09:58:04 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2024-04-25 09:58:04 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error?page=0&size=10&pinFlNumber=30211991235463", parameters={masked}
+2024-04-25 09:58:04 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-04-25 09:58:04 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 09:58:04 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Thu Apr 25 09:58:04 UZT 2024, status=404, error=Not Found, path=/api/v1/card/all/pnfl}]
+2024-04-25 09:58:04 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2024-04-25 09:58:31 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/card/all/pinfl?page=0&size=10&pinFlNumber=30211991235463", parameters={masked}
+2024-04-25 09:58:31 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#getAllByPnFl(int, int, String, HttpServletRequest)
+2024-04-25 09:58:31 [http-nio-8080-exec-4] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.200"
+2024-04-25 09:58:31 [http-nio-8080-exec-4] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-25 09:58:31 [http-nio-8080-exec-4] INFO  c.mokhir.dev.ATM.service.CardService - Successfully got cards:		 {"total":9,"content":[{"balance":0.0,"cardNumber":"8600552565545784","cardType":{"id":1,"name":"HUMO","number":860055,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600558320612311","cardType":{"id":1,"name":"HUMO","number":860055,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600552377598671","cardType":{"id":1,"name":"HUMO","number":860055,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600558185691201","cardType":{"id":1,"name":"HUMO","number":860055,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600556948411029","cardType":{"id":1,"name":"HUMO","number":860055,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600557993815345","cardType":{"id":1,"name":"HUMO","number":860055,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600558551134134","cardType":{"id":1,"name":"HUMO","number":860055,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600554342194016","cardType":{"id":1,"name":"HUMO","number":860055,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600557679903626","cardType":{"id":1,"name":"HUMO","number":860055,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}}],"pageable":{"sort":{"orders":[]},"pageNumber":0,"pageSize":10}}
+2024-04-25 09:58:31 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 09:58:31 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 1 containing com.mokhir.dev.ATM.aggregate.dto.res_dto.CardResDto instances]
+2024-04-25 09:58:31 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-25 10:09:23 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 10:09:23 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 10:09:23 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-25 10:09:45 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 1280 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-25 10:09:45 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-25 10:09:46 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-25 10:09:46 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 84 ms. Found 4 JPA repository interfaces.
+2024-04-25 10:09:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-25 10:09:47 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-25 10:09:47 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-25 10:09:47 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-25 10:09:47 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1890 ms
+2024-04-25 10:09:48 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-25 10:09:48 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-25 10:09:48 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@52d9d817
+2024-04-25 10:09:48 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-25 10:09:50 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 10:09:50 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-25 10:09:51 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 11 mappings in 'requestMappingHandlerMapping'
+2024-04-25 10:09:51 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-25 10:09:51 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-25 10:09:51 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-25 10:09:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-25 10:09:51 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 7.004 seconds (process running for 9.441)
+2024-04-25 10:10:16 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-25 10:10:16 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-25 10:10:16 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-25 10:10:16 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-25 10:10:16 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-25 10:10:16 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5b312863
+2024-04-25 10:10:16 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@4e8b36af
+2024-04-25 10:10:16 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-25 10:10:16 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2024-04-25 10:10:16 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/card/all/pinfl?page=0&size=10&pinFlNumber=30211991235463", parameters={masked}
+2024-04-25 10:10:16 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#getAllByPnFl(int, int, String, HttpServletRequest)
+2024-04-25 10:10:16 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.200"
+2024-04-25 10:10:16 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-25 10:10:17 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Successfully got cards:		 {"total":9,"content":[{"balance":0.0,"cardNumber":"8600552565545784","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":860055,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600558320612311","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":860055,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600552377598671","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":860055,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600558185691201","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":860055,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600556948411029","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":860055,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600557993815345","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":860055,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600558551134134","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":860055,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600554342194016","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":860055,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600557679903626","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":860055,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}}],"pageable":{"sort":{"orders":[]},"pageNumber":0,"pageSize":10}}
+2024-04-25 10:10:17 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 10:10:17 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 1 containing com.mokhir.dev.ATM.aggregate.dto.res_dto.CardResDto instances]
+2024-04-25 10:10:17 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-25 10:11:15 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/card/all/pinfl?page=0&size=10&pinFlNumber=30211991235463", parameters={masked}
+2024-04-25 10:11:15 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#getAllByPnFl(int, int, String, HttpServletRequest)
+2024-04-25 10:11:15 [http-nio-8080-exec-3] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.200"
+2024-04-25 10:11:15 [http-nio-8080-exec-3] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-25 10:11:15 [http-nio-8080-exec-3] INFO  c.mokhir.dev.ATM.service.CardService - Successfully got cards:		 {"total":9,"content":[{"balance":0.0,"cardNumber":"8600552565545784","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600558320612311","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600552377598671","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600558185691201","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600556948411029","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600557993815345","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600558551134134","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600554342194016","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600557679903626","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}}],"pageable":{"sort":{"orders":[]},"pageNumber":0,"pageSize":10}}
+2024-04-25 10:11:15 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 10:11:15 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 1 containing com.mokhir.dev.ATM.aggregate.dto.res_dto.CardResDto instances]
+2024-04-25 10:11:15 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-25 10:20:04 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 10:20:04 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 10:20:04 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-25 10:20:13 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 11364 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-25 10:20:13 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-25 10:20:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-25 10:20:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98 ms. Found 4 JPA repository interfaces.
+2024-04-25 10:20:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-25 10:20:15 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-25 10:20:15 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-25 10:20:15 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-25 10:20:15 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2092 ms
+2024-04-25 10:20:16 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-25 10:20:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-25 10:20:16 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6e46891d
+2024-04-25 10:20:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-25 10:20:19 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 10:20:20 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-25 10:20:20 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2024-04-25 10:20:20 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-25 10:20:20 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-25 10:20:20 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-25 10:20:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-25 10:20:20 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 8.635 seconds (process running for 10.298)
+2024-04-25 10:21:37 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-25 10:21:37 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-25 10:21:37 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-25 10:21:37 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-25 10:21:37 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-25 10:21:37 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@10c67c1c
+2024-04-25 10:21:37 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@43f5b014
+2024-04-25 10:21:37 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-25 10:21:37 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2024-04-25 10:21:37 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/card/all?page=0&size=10", parameters={masked}
+2024-04-25 10:21:37 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#getAll(int, int, HttpServletRequest)
+2024-04-25 10:21:37 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.200"
+2024-04-25 10:21:37 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-25 10:21:37 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Successfully got cards:		 {"total":9,"content":[{"balance":0.0,"cardNumber":"8600552565545784","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600558320612311","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600552377598671","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600558185691201","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600556948411029","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600557993815345","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600558551134134","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600554342194016","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"balance":0.0,"cardNumber":"8600557679903626","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}}],"pageable":{"sort":{"orders":[]},"pageNumber":0,"pageSize":10}}
+2024-04-25 10:21:37 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 10:21:37 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 1 containing com.mokhir.dev.ATM.aggregate.dto.res_dto.CardResDto instances]
+2024-04-25 10:21:37 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-25 10:22:13 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 10:22:13 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 10:22:13 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-25 10:22:33 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 6096 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-25 10:22:33 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-25 10:22:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-25 10:22:34 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 209 ms. Found 4 JPA repository interfaces.
+2024-04-25 10:22:35 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-25 10:22:35 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-25 10:22:35 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-25 10:22:35 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-25 10:22:35 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2584 ms
+2024-04-25 10:22:36 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-25 10:22:36 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-25 10:22:36 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@8851ec
+2024-04-25 10:22:36 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-25 10:22:38 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 10:22:39 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-25 10:22:39 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 12 mappings in 'requestMappingHandlerMapping'
+2024-04-25 10:22:40 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-25 10:22:40 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-25 10:22:40 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-25 10:22:40 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-25 10:22:40 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 8.265 seconds (process running for 10.665)
+2024-04-25 10:23:13 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-25 10:23:13 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-25 10:23:13 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-25 10:23:13 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-25 10:23:13 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-25 10:23:13 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4619854a
+2024-04-25 10:23:13 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@578781f7
+2024-04-25 10:23:13 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-25 10:23:13 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2024-04-25 10:23:13 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/card/all?page=0&size=10", parameters={masked}
+2024-04-25 10:23:13 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#getAll(int, int, HttpServletRequest)
+2024-04-25 10:23:13 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.200"
+2024-04-25 10:23:13 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-25 10:23:13 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Successfully got cards:		 {"total":9,"content":[{"id":1,"balance":0.0,"cardNumber":"8600552565545784","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":2,"balance":0.0,"cardNumber":"8600558320612311","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":3,"balance":0.0,"cardNumber":"8600552377598671","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":4,"balance":0.0,"cardNumber":"8600558185691201","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":5,"balance":0.0,"cardNumber":"8600556948411029","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":6,"balance":0.0,"cardNumber":"8600557993815345","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":7,"balance":0.0,"cardNumber":"8600558551134134","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":8,"balance":0.0,"cardNumber":"8600554342194016","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":9,"balance":0.0,"cardNumber":"8600557679903626","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}}],"pageable":{"sort":{"orders":[]},"pageNumber":0,"pageSize":10}}
+2024-04-25 10:23:13 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 10:23:13 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 1 containing com.mokhir.dev.ATM.aggregate.dto.res_dto.CardResDto instances]
+2024-04-25 10:23:13 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-25 10:23:30 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/card/all?page=0&size=20", parameters={masked}
+2024-04-25 10:23:30 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#getAll(int, int, HttpServletRequest)
+2024-04-25 10:23:30 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.200"
+2024-04-25 10:23:30 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-25 10:23:30 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Successfully got cards:		 {"total":9,"content":[{"id":1,"balance":0.0,"cardNumber":"8600552565545784","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":2,"balance":0.0,"cardNumber":"8600558320612311","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":3,"balance":0.0,"cardNumber":"8600552377598671","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":4,"balance":0.0,"cardNumber":"8600558185691201","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":5,"balance":0.0,"cardNumber":"8600556948411029","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":6,"balance":0.0,"cardNumber":"8600557993815345","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":7,"balance":0.0,"cardNumber":"8600558551134134","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":8,"balance":0.0,"cardNumber":"8600554342194016","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":9,"balance":0.0,"cardNumber":"8600557679903626","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}}],"pageable":{"sort":{"orders":[]},"pageNumber":0,"pageSize":20}}
+2024-04-25 10:23:30 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 10:23:30 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 1 containing com.mokhir.dev.ATM.aggregate.dto.res_dto.CardResDto instances]
+2024-04-25 10:23:30 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-25 10:27:32 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/card/all?page=0&size=20", parameters={masked}
+2024-04-25 10:27:32 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#getAll(int, int, HttpServletRequest)
+2024-04-25 10:27:32 [http-nio-8080-exec-6] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.200"
+2024-04-25 10:27:32 [http-nio-8080-exec-6] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-25 10:27:32 [http-nio-8080-exec-6] INFO  c.mokhir.dev.ATM.service.CardService - Successfully got cards:		 {"total":9,"content":[{"id":1,"balance":0.0,"cardNumber":"8600552565545784","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":2,"balance":0.0,"cardNumber":"8600558320612311","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":3,"balance":0.0,"cardNumber":"8600552377598671","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":4,"balance":0.0,"cardNumber":"8600558185691201","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":5,"balance":0.0,"cardNumber":"8600556948411029","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":6,"balance":0.0,"cardNumber":"8600557993815345","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":7,"balance":0.0,"cardNumber":"8600558551134134","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":8,"balance":0.0,"cardNumber":"8600554342194016","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}},{"id":9,"balance":0.0,"cardNumber":"8600557679903626","cardHolder":{"id":1,"name":"Murod","lastName":"Murodov","phoneNumber":"998903578585"},"cardType":{"id":1,"name":"HUMO","number":986033,"expirationYear":5,"currencyType":{"id":3,"name":"UZS"}}}],"pageable":{"sort":{"orders":[]},"pageNumber":0,"pageSize":20}}
+2024-04-25 10:27:32 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 10:27:32 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [Page 1 of 1 containing com.mokhir.dev.ATM.aggregate.dto.res_dto.CardResDto instances]
+2024-04-25 10:27:32 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-25 10:35:28 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 10:35:28 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 10:35:28 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-25 10:38:09 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 12756 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-25 10:38:09 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-25 10:38:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-25 10:38:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98 ms. Found 4 JPA repository interfaces.
+2024-04-25 10:38:11 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-25 10:38:11 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-25 10:38:11 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-25 10:38:11 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-25 10:38:11 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2005 ms
+2024-04-25 10:38:12 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-25 10:38:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-25 10:38:12 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@734f8317
+2024-04-25 10:38:12 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-25 10:38:14 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 10:38:14 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-25 10:38:15 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 13 mappings in 'requestMappingHandlerMapping'
+2024-04-25 10:38:15 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-25 10:38:15 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-25 10:38:15 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-25 10:38:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-25 10:38:15 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 6.755 seconds (process running for 8.601)
+2024-04-25 10:38:19 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-25 10:38:19 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-25 10:38:19 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-25 10:38:19 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-25 10:38:19 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-25 10:38:19 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2bb118ae
+2024-04-25 10:38:19 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@192aeae2
+2024-04-25 10:38:19 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-25 10:38:19 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2024-04-25 10:38:19 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/card/", parameters={}
+2024-04-25 10:38:19 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-25 10:38:19 [http-nio-8080-exec-2] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2024-04-25 10:38:19 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/card.]
+2024-04-25 10:38:19 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2024-04-25 10:38:19 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2024-04-25 10:38:19 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-04-25 10:38:19 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 10:38:19 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Thu Apr 25 10:38:19 UZT 2024, status=404, error=Not Found, path=/api/v1/card/}]
+2024-04-25 10:38:19 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2024-04-25 10:38:23 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/card/", parameters={}
+2024-04-25 10:38:23 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-25 10:38:23 [http-nio-8080-exec-3] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2024-04-25 10:38:23 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/card.]
+2024-04-25 10:38:23 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2024-04-25 10:38:23 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2024-04-25 10:38:23 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-04-25 10:38:23 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 10:38:23 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Thu Apr 25 10:38:23 UZT 2024, status=404, error=Not Found, path=/api/v1/card/}]
+2024-04-25 10:38:23 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2024-04-25 10:38:48 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/card/", parameters={}
+2024-04-25 10:38:48 [http-nio-8080-exec-4] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-25 10:38:48 [http-nio-8080-exec-4] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2024-04-25 10:38:48 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/card.]
+2024-04-25 10:38:48 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2024-04-25 10:38:48 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2024-04-25 10:38:48 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-04-25 10:38:48 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 10:38:48 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Thu Apr 25 10:38:48 UZT 2024, status=404, error=Not Found, path=/api/v1/card/}]
+2024-04-25 10:38:48 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2024-04-25 10:50:18 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 10:50:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 10:50:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-25 10:50:24 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 18280 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-25 10:50:24 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-25 10:50:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-25 10:50:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 182 ms. Found 4 JPA repository interfaces.
+2024-04-25 10:50:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-25 10:50:26 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-25 10:50:26 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-25 10:50:26 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-25 10:50:26 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2088 ms
+2024-04-25 10:50:27 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-25 10:50:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-25 10:50:27 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3b362f1
+2024-04-25 10:50:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-25 10:50:29 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 10:50:29 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-25 10:50:30 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 13 mappings in 'requestMappingHandlerMapping'
+2024-04-25 10:50:30 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-25 10:50:30 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-25 10:50:30 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-25 10:50:30 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-25 10:50:30 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 7.354 seconds (process running for 9.349)
+2024-04-25 10:50:35 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-25 10:50:35 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-25 10:50:35 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-25 10:50:35 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-25 10:50:35 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-25 10:50:35 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@60655642
+2024-04-25 10:50:35 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@247415be
+2024-04-25 10:50:35 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-25 10:50:35 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2024-04-25 10:50:35 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/card/", parameters={}
+2024-04-25 10:50:35 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-25 10:50:35 [http-nio-8080-exec-1] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2024-04-25 10:50:35 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/card.]
+2024-04-25 10:50:35 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2024-04-25 10:50:35 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2024-04-25 10:50:35 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-04-25 10:50:36 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 10:50:36 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Thu Apr 25 10:50:35 UZT 2024, status=404, error=Not Found, path=/api/v1/card/}]
+2024-04-25 10:50:36 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2024-04-25 10:52:28 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 10:52:28 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 10:52:28 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-25 10:52:38 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 10728 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-25 10:52:38 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-25 10:52:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-25 10:52:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 93 ms. Found 4 JPA repository interfaces.
+2024-04-25 10:52:40 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-25 10:52:40 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-25 10:52:40 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-25 10:52:40 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-25 10:52:40 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2068 ms
+2024-04-25 10:52:41 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-25 10:52:41 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-25 10:52:41 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@59313495
+2024-04-25 10:52:41 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-25 10:52:43 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 10:52:44 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-25 10:52:44 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 13 mappings in 'requestMappingHandlerMapping'
+2024-04-25 10:52:44 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-25 10:52:44 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-25 10:52:44 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-25 10:52:44 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-25 10:52:44 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 7.154 seconds (process running for 8.928)
+2024-04-25 10:53:10 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-25 10:53:10 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-25 10:53:10 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-25 10:53:10 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-25 10:53:10 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-25 10:53:10 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5afaae7e
+2024-04-25 10:53:10 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@28d1b2f
+2024-04-25 10:53:10 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-25 10:53:10 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2024-04-25 10:53:10 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/card/?id=4", parameters={masked}
+2024-04-25 10:53:10 [http-nio-8080-exec-1] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-25 10:53:10 [http-nio-8080-exec-1] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2024-04-25 10:53:10 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/card.]
+2024-04-25 10:53:10 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2024-04-25 10:53:10 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error?id=4", parameters={masked}
+2024-04-25 10:53:10 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-04-25 10:53:10 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 10:53:10 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Thu Apr 25 10:53:10 UZT 2024, status=404, error=Not Found, path=/api/v1/card/}]
+2024-04-25 10:53:10 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2024-04-25 10:56:23 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/card?id=4", parameters={masked}
+2024-04-25 10:56:23 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#getById(Long, HttpServletRequest)
+2024-04-25 10:56:23 [http-nio-8080-exec-5] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.mokhir.dev.ATM.aggregate.dto.res_dto.CardResDto> com.mokhir.dev.ATM.controller.CardController.getById(java.lang.Long,jakarta.servlet.http.HttpServletRequest): Required request parameter 'cardId' for method parameter type Long is not present
+2024-04-25 10:56:23 [http-nio-8080-exec-5] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'cardId' for method parameter type Long is not present]
+2024-04-25 10:56:23 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-25 10:56:23 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error?id=4", parameters={masked}
+2024-04-25 10:56:23 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-04-25 10:56:23 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 10:56:23 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Thu Apr 25 10:56:23 UZT 2024, status=400, error=Bad Request, path=/api/v1/card}]
+2024-04-25 10:56:23 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 400
+2024-04-25 10:57:15 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 10:57:15 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 10:57:15 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-25 10:57:24 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 14544 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-25 10:57:24 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-25 10:57:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-25 10:57:25 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 158 ms. Found 4 JPA repository interfaces.
+2024-04-25 10:57:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-25 10:57:26 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-25 10:57:26 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-25 10:57:26 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-25 10:57:26 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2195 ms
+2024-04-25 10:57:27 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-25 10:57:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-25 10:57:27 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6e46891d
+2024-04-25 10:57:27 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-25 10:57:30 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 10:57:31 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-25 10:57:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 13 mappings in 'requestMappingHandlerMapping'
+2024-04-25 10:57:31 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-25 10:57:31 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-25 10:57:31 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-25 10:57:31 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-25 10:57:31 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 8.219 seconds (process running for 9.899)
+2024-04-25 10:57:49 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-25 10:57:49 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-25 10:57:49 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-25 10:57:49 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-25 10:57:49 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-25 10:57:49 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@10c67c1c
+2024-04-25 10:57:49 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@43f5b014
+2024-04-25 10:57:49 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-25 10:57:49 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2024-04-25 10:57:49 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/card?id=4", parameters={masked}
+2024-04-25 10:57:49 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#getById(Long, HttpServletRequest)
+2024-04-25 10:57:49 [http-nio-8080-exec-2] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.mokhir.dev.ATM.aggregate.dto.res_dto.CardResDto> com.mokhir.dev.ATM.controller.CardController.getById(java.lang.Long,jakarta.servlet.http.HttpServletRequest): Required request parameter 'cardId' for method parameter type Long is not present
+2024-04-25 10:57:49 [http-nio-8080-exec-2] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'cardId' for method parameter type Long is not present]
+2024-04-25 10:57:49 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-25 10:57:49 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error?id=4", parameters={masked}
+2024-04-25 10:57:49 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-04-25 10:57:50 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 10:57:50 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Thu Apr 25 10:57:50 UZT 2024, status=400, error=Bad Request, path=/api/v1/card}]
+2024-04-25 10:57:50 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 400
+2024-04-25 10:59:09 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 10:59:09 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 10:59:09 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-25 10:59:16 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 16248 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-25 10:59:16 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-25 10:59:17 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-25 10:59:17 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 80 ms. Found 4 JPA repository interfaces.
+2024-04-25 10:59:17 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-25 10:59:17 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-25 10:59:17 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-25 10:59:18 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-25 10:59:18 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1641 ms
+2024-04-25 10:59:18 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-25 10:59:18 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-25 10:59:18 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4a04ca74
+2024-04-25 10:59:18 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-25 10:59:20 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 10:59:20 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-25 10:59:21 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 13 mappings in 'requestMappingHandlerMapping'
+2024-04-25 10:59:21 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-25 10:59:21 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-25 10:59:21 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-25 10:59:21 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-25 10:59:21 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 5.746 seconds (process running for 7.144)
+2024-04-25 10:59:25 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-25 10:59:25 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-25 10:59:25 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-25 10:59:25 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-25 10:59:25 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-25 10:59:25 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@7364073b
+2024-04-25 10:59:25 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@5f32de90
+2024-04-25 10:59:25 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-25 10:59:25 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2024-04-25 10:59:25 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/card/?id=4", parameters={masked}
+2024-04-25 10:59:25 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#getById(Long, HttpServletRequest)
+2024-04-25 10:59:25 [http-nio-8080-exec-1] DEBUG o.s.web.method.HandlerMethod - Could not resolve parameter [0] in public org.springframework.http.ResponseEntity<com.mokhir.dev.ATM.aggregate.dto.res_dto.CardResDto> com.mokhir.dev.ATM.controller.CardController.getById(java.lang.Long,jakarta.servlet.http.HttpServletRequest): Required request parameter 'cardId' for method parameter type Long is not present
+2024-04-25 10:59:25 [http-nio-8080-exec-1] WARN  o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'cardId' for method parameter type Long is not present]
+2024-04-25 10:59:25 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-25 10:59:25 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error?id=4", parameters={masked}
+2024-04-25 10:59:25 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-04-25 10:59:25 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 10:59:25 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Thu Apr 25 10:59:25 UZT 2024, status=400, error=Bad Request, path=/api/v1/card/}]
+2024-04-25 10:59:25 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 400
+2024-04-25 11:00:39 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 11:00:39 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 11:00:39 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-25 11:00:45 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 9016 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-25 11:00:45 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-25 11:00:46 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-25 11:00:46 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 4 JPA repository interfaces.
+2024-04-25 11:00:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-25 11:00:47 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-25 11:00:47 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-25 11:00:47 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-25 11:00:47 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1698 ms
+2024-04-25 11:00:48 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-25 11:00:48 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-25 11:00:48 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@636dbfe7
+2024-04-25 11:00:48 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-25 11:00:49 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 11:00:50 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-25 11:00:50 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 13 mappings in 'requestMappingHandlerMapping'
+2024-04-25 11:00:50 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-25 11:00:50 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-25 11:00:50 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-25 11:00:50 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-25 11:00:50 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 5.866 seconds (process running for 7.398)
+2024-04-25 11:01:14 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-25 11:01:14 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-25 11:01:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-25 11:01:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-25 11:01:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-25 11:01:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1e9d6c78
+2024-04-25 11:01:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@4960b819
+2024-04-25 11:01:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-25 11:01:14 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-04-25 11:01:14 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/card/?id=4", parameters={masked}
+2024-04-25 11:01:14 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#getById(Long, HttpServletRequest)
+2024-04-25 11:01:14 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.200"
+2024-04-25 11:01:14 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-25 11:01:15 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-25 11:01:15 [http-nio-8080-exec-2] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: CardService: getAllByPnFl: No value present 
+2024-04-25 11:01:15 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 11:01:15 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=CardService: getAllBy (truncated)...]
+2024-04-25 11:01:15 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: CardService: getAllByPnFl: No value present]
+2024-04-25 11:01:15 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-25 11:02:30 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 11:02:30 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 11:02:30 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-25 11:02:37 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 13464 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-25 11:02:37 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-25 11:02:38 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-25 11:02:38 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 88 ms. Found 4 JPA repository interfaces.
+2024-04-25 11:02:39 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-25 11:02:39 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-25 11:02:39 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-25 11:02:39 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-25 11:02:39 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1646 ms
+2024-04-25 11:02:39 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-25 11:02:39 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-25 11:02:40 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2e8b24a1
+2024-04-25 11:02:40 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-25 11:02:41 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 11:02:42 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-25 11:02:42 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 13 mappings in 'requestMappingHandlerMapping'
+2024-04-25 11:02:42 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-25 11:02:42 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-25 11:02:42 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-25 11:02:42 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-25 11:02:42 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 5.79 seconds (process running for 7.375)
+2024-04-25 11:02:46 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-25 11:02:46 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-25 11:02:46 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-25 11:02:46 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-25 11:02:46 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-25 11:02:46 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2e2546bf
+2024-04-25 11:02:46 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2bd158ea
+2024-04-25 11:02:46 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-25 11:02:46 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2024-04-25 11:02:46 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/card/?cardId=4", parameters={masked}
+2024-04-25 11:02:46 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#getById(Long, HttpServletRequest)
+2024-04-25 11:02:47 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.200"
+2024-04-25 11:02:47 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-25 11:02:47 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-25 11:02:47 [http-nio-8080-exec-2] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: CardService: getAllByPnFl: No value present 
+2024-04-25 11:02:47 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 11:02:47 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=CardService: getAllBy (truncated)...]
+2024-04-25 11:02:47 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: CardService: getAllByPnFl: No value present]
+2024-04-25 11:02:47 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-25 11:11:29 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 11:11:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 11:11:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-25 11:11:39 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 11968 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-25 11:11:39 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-25 11:11:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-25 11:11:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 144 ms. Found 4 JPA repository interfaces.
+2024-04-25 11:11:42 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-25 11:11:42 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-25 11:11:42 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-25 11:11:42 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-25 11:11:42 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3184 ms
+2024-04-25 11:11:43 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-25 11:11:43 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-25 11:11:43 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6451a288
+2024-04-25 11:11:43 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-25 11:11:46 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 11:11:46 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-25 11:11:46 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 13 mappings in 'requestMappingHandlerMapping'
+2024-04-25 11:11:46 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-25 11:11:46 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-25 11:11:46 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-25 11:11:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-25 11:11:47 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 8.99 seconds (process running for 10.752)
+2024-04-25 11:12:27 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-25 11:12:27 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-25 11:12:27 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-25 11:12:27 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-25 11:12:27 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-25 11:12:27 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5c7b504
+2024-04-25 11:12:27 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@43735ea0
+2024-04-25 11:12:27 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-25 11:12:27 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-04-25 11:12:27 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/card/?cardId=4", parameters={masked}
+2024-04-25 11:12:27 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#getById(Long, HttpServletRequest)
+2024-04-25 11:12:27 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.200"
+2024-04-25 11:12:27 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-25 11:12:27 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 11:12:27 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CardResDto(id=4, balance=0.0, cardNumber=8600558185691201, cardHolder=CardHolderResDto(id=1, name=Mu (truncated)...]
+2024-04-25 11:12:28 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-25 11:28:29 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 11:28:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 11:28:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-25 11:28:36 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 18352 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-25 11:28:36 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-25 11:28:37 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-25 11:28:37 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 4 JPA repository interfaces.
+2024-04-25 11:28:38 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-25 11:28:38 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-25 11:28:38 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-25 11:28:38 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-25 11:28:38 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1484 ms
+2024-04-25 11:28:38 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-25 11:28:38 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-25 11:28:38 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6e517c9e
+2024-04-25 11:28:38 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-25 11:28:40 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 11:28:40 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-25 11:28:40 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 14 mappings in 'requestMappingHandlerMapping'
+2024-04-25 11:28:40 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-25 11:28:40 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-25 11:28:41 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-25 11:28:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-25 11:28:41 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 5.135 seconds (process running for 6.283)
+2024-04-25 11:32:38 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-25 11:32:38 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-25 11:32:38 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-25 11:32:38 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-25 11:32:38 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-25 11:32:38 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@c950fd
+2024-04-25 11:32:38 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2222cd2c
+2024-04-25 11:32:38 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-25 11:32:38 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2024-04-25 11:32:38 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - PUT "/api/v1/card", parameters={}
+2024-04-25 11:32:38 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#updatePin(CardReqDto, HttpServletRequest)
+2024-04-25 11:32:38 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardReqDto(id=3, cardPin=2222, userId=null, cardTypeId=null)]
+2024-04-25 11:32:38 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.200"
+2024-04-25 11:32:38 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-25 11:32:38 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 11:32:38 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ResponseMessage(message=Password updated successfully, entities=CardResDto(id=3, balance=0.0, cardNu (truncated)...]
+2024-04-25 11:32:38 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-25 11:33:55 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 11:33:55 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 11:33:55 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-25 11:34:01 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 14572 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-25 11:34:01 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-25 11:34:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-25 11:34:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86 ms. Found 4 JPA repository interfaces.
+2024-04-25 11:34:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-25 11:34:03 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-25 11:34:03 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-25 11:34:03 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-25 11:34:03 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1683 ms
+2024-04-25 11:34:03 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-25 11:34:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-25 11:34:04 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@443af394
+2024-04-25 11:34:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-25 11:34:05 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 11:34:06 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-25 11:34:06 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 14 mappings in 'requestMappingHandlerMapping'
+2024-04-25 11:34:06 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-25 11:34:06 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-25 11:34:06 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-25 11:34:06 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-25 11:34:06 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 5.466 seconds (process running for 6.677)
+2024-04-25 11:34:32 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-25 11:34:32 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-25 11:34:32 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-25 11:34:32 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-25 11:34:32 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-25 11:34:32 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@52df6d0f
+2024-04-25 11:34:32 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@1e987f59
+2024-04-25 11:34:32 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-25 11:34:32 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-04-25 11:34:32 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - PUT "/api/v1/card", parameters={}
+2024-04-25 11:34:32 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#updatePin(CardReqDto, HttpServletRequest)
+2024-04-25 11:34:32 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardReqDto(id=3, cardPin=2222, userId=null, cardTypeId=null)]
+2024-04-25 11:34:32 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.200"
+2024-04-25 11:34:32 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-25 11:34:33 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-25 11:34:33 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ResponseMessage(message=Password updated successfully, entities=CardResDto(id=3, balance=0.0, cardNu (truncated)...]
+2024-04-25 11:34:33 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-25 12:49:03 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 12:49:03 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 12:49:03 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-25 12:49:19 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 6428 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-25 12:49:19 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-25 12:49:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-25 12:49:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 102 ms. Found 5 JPA repository interfaces.
+2024-04-25 12:49:21 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-25 12:49:21 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-25 12:49:21 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-25 12:49:21 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-25 12:49:21 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1866 ms
+2024-04-25 12:49:22 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-25 12:49:22 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-25 12:49:22 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1850f2da
+2024-04-25 12:49:22 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-25 12:49:24 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 12:49:24 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cardHistoryController' defined in file [C:\Users\moxir\IdeaProjects\ATM\target\classes\com\mokhir\dev\ATM\controller\CardHistoryController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'cardHistoryService' defined in file [C:\Users\moxir\IdeaProjects\ATM\target\classes\com\mokhir\dev\ATM\service\CardHistoryService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'cardHistoryRepository' defined in com.mokhir.dev.ATM.repository.CardHistoryRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Reason: Failed to create query for method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long) expects at least 2 arguments but only found 1; This leaves an operator of type SIMPLE_PROPERTY for property toCard unbound
+2024-04-25 12:49:24 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 12:49:24 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 12:49:24 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-25 12:49:24 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-04-25 12:49:24 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-25 12:49:24 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cardHistoryController' defined in file [C:\Users\moxir\IdeaProjects\ATM\target\classes\com\mokhir\dev\ATM\controller\CardHistoryController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'cardHistoryService' defined in file [C:\Users\moxir\IdeaProjects\ATM\target\classes\com\mokhir\dev\ATM\service\CardHistoryService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'cardHistoryRepository' defined in com.mokhir.dev.ATM.repository.CardHistoryRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Reason: Failed to create query for method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long) expects at least 2 arguments but only found 1; This leaves an operator of type SIMPLE_PROPERTY for property toCard unbound
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.mokhir.dev.ATM.AtmApplication.main(AtmApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cardHistoryService' defined in file [C:\Users\moxir\IdeaProjects\ATM\target\classes\com\mokhir\dev\ATM\service\CardHistoryService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'cardHistoryRepository' defined in com.mokhir.dev.ATM.repository.CardHistoryRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Reason: Failed to create query for method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long) expects at least 2 arguments but only found 1; This leaves an operator of type SIMPLE_PROPERTY for property toCard unbound
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cardHistoryRepository' defined in com.mokhir.dev.ATM.repository.CardHistoryRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Reason: Failed to create query for method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long) expects at least 2 arguments but only found 1; This leaves an operator of type SIMPLE_PROPERTY for property toCard unbound
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 33 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Reason: Failed to create query for method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long) expects at least 2 arguments but only found 1; This leaves an operator of type SIMPLE_PROPERTY for property toCard unbound
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:115)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:99)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:88)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:88)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:357)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:279)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135)
+	at org.springframework.data.util.Lazy.get(Lazy.java:113)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:285)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 44 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long) expects at least 2 arguments but only found 1; This leaves an operator of type SIMPLE_PROPERTY for property toCard unbound
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:106)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:124)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:258)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:95)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:111)
+	... 56 common frames omitted
+Caused by: java.lang.IllegalStateException: Method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long) expects at least 2 arguments but only found 1; This leaves an operator of type SIMPLE_PROPERTY for property toCard unbound
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.throwExceptionOnArgumentMismatch(PartTreeJpaQuery.java:162)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.validate(PartTreeJpaQuery.java:148)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:101)
+	... 60 common frames omitted
+2024-04-25 12:49:48 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 14588 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-25 12:49:48 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-25 12:49:49 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-25 12:49:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 89 ms. Found 5 JPA repository interfaces.
+2024-04-25 12:49:50 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-25 12:49:50 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-25 12:49:50 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-25 12:49:50 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-25 12:49:50 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1832 ms
+2024-04-25 12:49:51 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-25 12:49:51 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-25 12:49:51 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@15e8c040
+2024-04-25 12:49:51 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-25 12:49:53 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 12:49:53 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cardHistoryController' defined in file [C:\Users\moxir\IdeaProjects\ATM\target\classes\com\mokhir\dev\ATM\controller\CardHistoryController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'cardHistoryService' defined in file [C:\Users\moxir\IdeaProjects\ATM\target\classes\com\mokhir\dev\ATM\service\CardHistoryService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'cardHistoryRepository' defined in com.mokhir.dev.ATM.repository.CardHistoryRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Reason: Failed to create query for method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long) expects at least 2 arguments but only found 1; This leaves an operator of type SIMPLE_PROPERTY for property toCard unbound
+2024-04-25 12:49:53 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 12:49:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 12:49:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-25 12:49:53 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-04-25 12:49:53 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-25 12:49:53 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cardHistoryController' defined in file [C:\Users\moxir\IdeaProjects\ATM\target\classes\com\mokhir\dev\ATM\controller\CardHistoryController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'cardHistoryService' defined in file [C:\Users\moxir\IdeaProjects\ATM\target\classes\com\mokhir\dev\ATM\service\CardHistoryService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'cardHistoryRepository' defined in com.mokhir.dev.ATM.repository.CardHistoryRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Reason: Failed to create query for method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long) expects at least 2 arguments but only found 1; This leaves an operator of type SIMPLE_PROPERTY for property toCard unbound
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.mokhir.dev.ATM.AtmApplication.main(AtmApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cardHistoryService' defined in file [C:\Users\moxir\IdeaProjects\ATM\target\classes\com\mokhir\dev\ATM\service\CardHistoryService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'cardHistoryRepository' defined in com.mokhir.dev.ATM.repository.CardHistoryRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Reason: Failed to create query for method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long) expects at least 2 arguments but only found 1; This leaves an operator of type SIMPLE_PROPERTY for property toCard unbound
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cardHistoryRepository' defined in com.mokhir.dev.ATM.repository.CardHistoryRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Reason: Failed to create query for method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long) expects at least 2 arguments but only found 1; This leaves an operator of type SIMPLE_PROPERTY for property toCard unbound
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 33 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Reason: Failed to create query for method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long) expects at least 2 arguments but only found 1; This leaves an operator of type SIMPLE_PROPERTY for property toCard unbound
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:115)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:99)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:88)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:88)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:357)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:279)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135)
+	at org.springframework.data.util.Lazy.get(Lazy.java:113)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:285)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 44 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long); Method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long) expects at least 2 arguments but only found 1; This leaves an operator of type SIMPLE_PROPERTY for property toCard unbound
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:106)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:124)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:258)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:95)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:111)
+	... 56 common frames omitted
+Caused by: java.lang.IllegalStateException: Method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long) expects at least 2 arguments but only found 1; This leaves an operator of type SIMPLE_PROPERTY for property toCard unbound
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.throwExceptionOnArgumentMismatch(PartTreeJpaQuery.java:162)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.validate(PartTreeJpaQuery.java:148)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:101)
+	... 60 common frames omitted
+2024-04-25 12:52:50 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 9352 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-25 12:52:50 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-25 12:52:51 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-25 12:52:51 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 85 ms. Found 5 JPA repository interfaces.
+2024-04-25 12:52:52 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-25 12:52:52 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-25 12:52:52 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-25 12:52:52 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-25 12:52:52 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1970 ms
+2024-04-25 12:52:52 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-25 12:52:52 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-25 12:52:52 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@37d6dddc
+2024-04-25 12:52:52 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-25 12:52:54 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 12:52:54 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cardHistoryController' defined in file [C:\Users\moxir\IdeaProjects\ATM\target\classes\com\mokhir\dev\ATM\controller\CardHistoryController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'cardHistoryService' defined in file [C:\Users\moxir\IdeaProjects\ATM\target\classes\com\mokhir\dev\ATM\service\CardHistoryService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'cardHistoryRepository' defined in com.mokhir.dev.ATM.repository.CardHistoryRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long,java.lang.Long); Reason: Failed to create query for method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long,java.lang.Long); Cannot compare left expression of type 'com.mokhir.dev.ATM.aggregate.entity.Card' with right expression of type 'java.lang.Long'
+2024-04-25 12:52:54 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 12:52:54 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 12:52:54 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-25 12:52:54 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2024-04-25 12:52:54 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-04-25 12:52:54 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cardHistoryController' defined in file [C:\Users\moxir\IdeaProjects\ATM\target\classes\com\mokhir\dev\ATM\controller\CardHistoryController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'cardHistoryService' defined in file [C:\Users\moxir\IdeaProjects\ATM\target\classes\com\mokhir\dev\ATM\service\CardHistoryService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'cardHistoryRepository' defined in com.mokhir.dev.ATM.repository.CardHistoryRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long,java.lang.Long); Reason: Failed to create query for method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long,java.lang.Long); Cannot compare left expression of type 'com.mokhir.dev.ATM.aggregate.entity.Card' with right expression of type 'java.lang.Long'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at com.mokhir.dev.ATM.AtmApplication.main(AtmApplication.java:10)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cardHistoryService' defined in file [C:\Users\moxir\IdeaProjects\ATM\target\classes\com\mokhir\dev\ATM\service\CardHistoryService.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'cardHistoryRepository' defined in com.mokhir.dev.ATM.repository.CardHistoryRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long,java.lang.Long); Reason: Failed to create query for method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long,java.lang.Long); Cannot compare left expression of type 'com.mokhir.dev.ATM.aggregate.entity.Card' with right expression of type 'java.lang.Long'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cardHistoryRepository' defined in com.mokhir.dev.ATM.repository.CardHistoryRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Could not create query for public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long,java.lang.Long); Reason: Failed to create query for method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long,java.lang.Long); Cannot compare left expression of type 'com.mokhir.dev.ATM.aggregate.entity.Card' with right expression of type 'java.lang.Long'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 33 common frames omitted
+Caused by: org.springframework.data.repository.query.QueryCreationException: Could not create query for public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long,java.lang.Long); Reason: Failed to create query for method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long,java.lang.Long); Cannot compare left expression of type 'com.mokhir.dev.ATM.aggregate.entity.Card' with right expression of type 'java.lang.Long'
+	at org.springframework.data.repository.query.QueryCreationException.create(QueryCreationException.java:101)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:115)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.mapMethodsToQuery(QueryExecutorMethodInterceptor.java:99)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lambda$new$0(QueryExecutorMethodInterceptor.java:88)
+	at java.base/java.util.Optional.map(Optional.java:260)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.<init>(QueryExecutorMethodInterceptor.java:88)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:357)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:279)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135)
+	at org.springframework.data.util.Lazy.get(Lazy.java:113)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:285)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 44 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Failed to create query for method public abstract java.util.List com.mokhir.dev.ATM.repository.CardHistoryRepository.findAllByFromCardOrToCard(java.lang.Long,java.lang.Long); Cannot compare left expression of type 'com.mokhir.dev.ATM.aggregate.entity.Card' with right expression of type 'java.lang.Long'
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:106)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:124)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:258)
+	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:95)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.lookupQuery(QueryExecutorMethodInterceptor.java:111)
+	... 56 common frames omitted
+Caused by: org.hibernate.query.SemanticException: Cannot compare left expression of type 'com.mokhir.dev.ATM.aggregate.entity.Card' with right expression of type 'java.lang.Long'
+	at org.hibernate.query.sqm.internal.TypecheckUtil.assertComparable(TypecheckUtil.java:358)
+	at org.hibernate.query.sqm.tree.predicate.SqmComparisonPredicate.<init>(SqmComparisonPredicate.java:48)
+	at org.hibernate.query.sqm.tree.predicate.SqmComparisonPredicate.<init>(SqmComparisonPredicate.java:34)
+	at org.hibernate.query.sqm.internal.SqmCriteriaNodeBuilder.equal(SqmCriteriaNodeBuilder.java:2121)
+	at org.hibernate.query.sqm.internal.SqmCriteriaNodeBuilder.equal(SqmCriteriaNodeBuilder.java:192)
+	at org.springframework.data.jpa.repository.query.JpaQueryCreator$PredicateBuilder.build(JpaQueryCreator.java:312)
+	at org.springframework.data.jpa.repository.query.JpaQueryCreator.toPredicate(JpaQueryCreator.java:210)
+	at org.springframework.data.jpa.repository.query.JpaQueryCreator.create(JpaQueryCreator.java:121)
+	at org.springframework.data.jpa.repository.query.JpaQueryCreator.create(JpaQueryCreator.java:1)
+	at org.springframework.data.repository.query.parser.AbstractQueryCreator.createCriteria(AbstractQueryCreator.java:119)
+	at org.springframework.data.repository.query.parser.AbstractQueryCreator.createQuery(AbstractQueryCreator.java:95)
+	at org.springframework.data.repository.query.parser.AbstractQueryCreator.createQuery(AbstractQueryCreator.java:81)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery$QueryPreparer.<init>(PartTreeJpaQuery.java:222)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery$CountQueryPreparer.<init>(PartTreeJpaQuery.java:365)
+	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:102)
+	... 60 common frames omitted
+2024-04-25 12:56:01 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 5332 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-25 12:56:01 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-25 12:56:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-25 12:56:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79 ms. Found 5 JPA repository interfaces.
+2024-04-25 12:56:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-25 12:56:03 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-25 12:56:03 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-25 12:56:03 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-25 12:56:03 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1564 ms
+2024-04-25 12:56:04 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-25 12:56:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-25 12:56:04 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2d73e8c4
+2024-04-25 12:56:04 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-25 12:56:05 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 12:56:06 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-25 12:56:06 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+2024-04-25 12:56:06 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-25 12:56:06 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-25 12:56:06 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-25 12:56:06 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-25 12:56:06 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 5.621 seconds (process running for 6.713)
+2024-04-25 12:56:44 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 12:56:44 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 12:56:44 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-25 13:00:40 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 9884 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-25 13:00:40 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-25 13:00:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-25 13:00:41 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 117 ms. Found 5 JPA repository interfaces.
+2024-04-25 13:00:42 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-25 13:00:42 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-25 13:00:42 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-25 13:00:42 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-25 13:00:42 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1706 ms
+2024-04-25 13:00:43 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-25 13:00:43 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-25 13:00:43 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3ce7394f
+2024-04-25 13:00:43 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-25 13:00:44 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 13:00:45 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-25 13:00:45 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+2024-04-25 13:00:45 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-25 13:00:45 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-25 13:00:45 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-25 13:00:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-25 13:00:45 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 5.704 seconds (process running for 7.45)
+2024-04-25 17:56:47 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=40m59s983ms951µs100ns).
+2024-04-25 18:01:22 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-25 18:01:22 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-25 18:01:22 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
