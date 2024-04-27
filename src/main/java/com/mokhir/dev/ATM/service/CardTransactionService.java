@@ -1,17 +1,14 @@
 package com.mokhir.dev.ATM.service;
 
 import com.google.gson.Gson;
+import com.mokhir.dev.ATM.aggregate.dto.req_dto.CardTransformReqDto;
 import com.mokhir.dev.ATM.aggregate.dto.req_dto.CashingReqDto;
 import com.mokhir.dev.ATM.aggregate.dto.req_dto.FillingReqDto;
 import com.mokhir.dev.ATM.aggregate.dto.res_dto.CardHistoryResDto;
 import com.mokhir.dev.ATM.aggregate.dto.res_dto.CardResDto;
-import com.mokhir.dev.ATM.aggregate.dto.res_dto.CashingResDto;
-import com.mokhir.dev.ATM.aggregate.dto.res_dto.FillingResDto;
+import com.mokhir.dev.ATM.aggregate.dto.res_dto.ChequeResDto;
 import com.mokhir.dev.ATM.aggregate.entity.*;
-import com.mokhir.dev.ATM.exceptions.CardBlockedException;
-import com.mokhir.dev.ATM.exceptions.DatabaseException;
-import com.mokhir.dev.ATM.exceptions.NotEnoughFundsException;
-import com.mokhir.dev.ATM.exceptions.NotFoundException;
+import com.mokhir.dev.ATM.exceptions.*;
 import com.mokhir.dev.ATM.mapper.CardHistoryMapper;
 import com.mokhir.dev.ATM.mapper.CardMapper;
 import com.mokhir.dev.ATM.repository.BankNoteRepository;
@@ -49,7 +46,7 @@ public class CardTransactionService implements CardTransactionServiceInterface {
 
     @Override
     @Transactional
-    public CashingResDto cash(CashingReqDto cashingReqDto, HttpServletRequest servletRequest) {
+    public ChequeResDto cash(CashingReqDto cashingReqDto, HttpServletRequest servletRequest) {
         try {
             String ClientInfo = networkDataService.getClientIPv4Address(servletRequest);
             String ClientIP = networkDataService.getRemoteUserInfo(servletRequest);
@@ -88,9 +85,9 @@ public class CardTransactionService implements CardTransactionServiceInterface {
             cashedCard.setFromCard(byCardNumber);
             cashedCard.setToCard(null);
             boolean needCheque = Boolean.parseBoolean(cashingReqDto.getChequeIsNeed());
-            CashingResDto cashingResDto = toCashingResDto(cashedCard, needCheque, nominalsCount);
-            cashingResDto.setCashingTypeId(Long.valueOf(cashingReqDto.getCashingTypeId()));
-            return cashingResDto;
+            ChequeResDto chequeResDto = toCashingResDto(cashedCard, needCheque, nominalsCount);
+            chequeResDto.setCashingTypeId(Long.valueOf(cashingReqDto.getCashingTypeId()));
+            return chequeResDto;
         } catch (Exception ex) {
             throw new DatabaseException(ex.getMessage());
         }
@@ -99,7 +96,7 @@ public class CardTransactionService implements CardTransactionServiceInterface {
 
     @Override
     @Transactional
-    public CashingResDto fill(FillingReqDto fillingReqDto, HttpServletRequest servletRequest) {
+    public ChequeResDto fill(FillingReqDto fillingReqDto, HttpServletRequest servletRequest) {
         try {
             String ClientInfo = networkDataService.getClientIPv4Address(servletRequest);
             String ClientIP = networkDataService.getRemoteUserInfo(servletRequest);
@@ -121,7 +118,7 @@ public class CardTransactionService implements CardTransactionServiceInterface {
             long amount = Long.parseLong(fillingReqDto.getAmount());
             double fillingBalance = amount - amount * 0.01;
             //filling balance with commission
-            byCardNumber.setBalance(byCardNumber.getBalance() +fillingBalance);
+            byCardNumber.setBalance(byCardNumber.getBalance() + fillingBalance);
             cardRepository.save(byCardNumber);
             HistoryCard historyCard = cardHistoryService.fill(byCardNumber, amount, servletRequest);
 
@@ -138,20 +135,102 @@ public class CardTransactionService implements CardTransactionServiceInterface {
                     .build();
             cardHistoryService.maskingCardHistory(cardHistoryResDto);
             CardResDto toCard = cardHistoryResDto.getToCard();
-            CashingResDto cashingResDto = CashingResDto.builder()
+            ChequeResDto chequeResDto = ChequeResDto.builder()
                     .id(cardHistoryResDto.getId())
                     .transactionTime(cardHistoryResDto.getDate())
                     .message("Cashed successfully")
                     .build();
 
             if (needCheque) {
-                cashingResDto.setChequeIsNeed(true);
-                cashingResDto.setAmount(String.valueOf(fillingBalance));
-                cashingResDto.setCommission(String.valueOf(amount*0.01));
-                cashingResDto.setCardNumber(toCard.getCardNumber());
-                cashingResDto.setCardHolderResDto(toCard.getCardHolder());
+                chequeResDto.setChequeIsNeed(true);
+                chequeResDto.setAmount(String.valueOf(fillingBalance));
+                chequeResDto.setCommission(String.valueOf(amount * 0.01));
+                chequeResDto.setSenderCardNumber(toCard.getCardNumber());
+                chequeResDto.setCardHolderSenderDto(toCard.getCardHolder());
             }
-            return cashingResDto;
+            return chequeResDto;
+        } catch (Exception ex) {
+            throw new DatabaseException(ex.getMessage());
+        }
+    }
+
+
+    public ChequeResDto transform(CardTransformReqDto transformReq, HttpServletRequest servletRequest) {
+        try {
+            String ClientInfo = networkDataService.getClientIPv4Address(servletRequest);
+            String ClientIP = networkDataService.getRemoteUserInfo(servletRequest);
+            LOG.info("Client host : \t\t {}", gson.toJson(ClientInfo));
+            LOG.info("Client IP :  \t\t {}", gson.toJson(ClientIP));
+
+            //validation of cards
+            String cardNumberSender = transformReq.getCardFrom();
+            String cardNumberReceiver = transformReq.getCardTo();
+            Card byCardNumberSender = cardRepository.findByCardNumber(cardNumberSender);
+            Card byCardNumberReceiver = cardRepository.findByCardNumber(cardNumberReceiver);
+            if (!byCardNumberSender.getIsActive() || !byCardNumberReceiver.getIsActive()) {
+                throw new CardBlockedException("Please try again, after unblocking your card!");
+            }
+            String reqDtoCardPin = transformReq.getCardPin();
+            String originalCardPin = String.valueOf(byCardNumberSender.getCardPin());
+            if (!reqDtoCardPin.equals(originalCardPin)) {
+                throw new NotFoundException("Card pin does not match");
+            }
+
+            if (byCardNumberSender.getCardNumber().equals(byCardNumberReceiver.getCardNumber())){
+                throw new SelfTransactionException("You can't transform from the current card to the same card!");
+            }
+
+            if (!byCardNumberSender.getCardType().getCurrencyType().getId()
+                    .equals(byCardNumberReceiver.getCardType().getCurrencyType().getId())){
+                throw new SelfTransactionException("You can't transform to another card type");
+            }
+
+            long transformBalance = Long.parseLong(transformReq.getAmount());
+            Double minusAmount = Double.parseDouble(String.valueOf(transformBalance + transformBalance * 0.01));
+            if (!(byCardNumberSender.getBalance() >= minusAmount)) {
+                throw new NotEnoughFundsException("Not enough funds, in your balance");
+            }
+
+            byCardNumberSender.setBalance(byCardNumberSender.getBalance() - minusAmount);
+            //filling balance with commission
+            byCardNumberReceiver.setBalance(byCardNumberReceiver.getBalance() + transformBalance);
+            cardRepository.save(byCardNumberSender);
+            cardRepository.save(byCardNumberReceiver);
+            HistoryCard historyCard = cardHistoryService
+                    .transform(byCardNumberSender, byCardNumberReceiver, transformBalance);
+
+
+            boolean needCheque = Boolean.parseBoolean(transformReq.getChequeIsNeed());
+            CardResDto cardResSender = cardMapper.toDto(historyCard.getToCard());
+            CardResDto cardResReceiver = cardMapper.toDto(historyCard.getFromCard());
+            CardHistoryResDto cardHistoryResDto = CardHistoryResDto
+                    .builder()
+                    .date(historyCard.getDate())
+                    .id(historyCard.getId())
+                    .commission(historyCard.getCommission())
+                    .toCard(cardResReceiver)
+                    .fromCard(cardResSender)
+                    .amount(historyCard.getAmount())
+                    .build();
+            cardHistoryService.maskingCardHistory(cardHistoryResDto);
+            ChequeResDto chequeResDto = ChequeResDto.builder()
+                    .id(cardHistoryResDto.getId())
+                    .transactionTime(cardHistoryResDto.getDate())
+                    .message("Sent successfully")
+                    .build();
+
+            if (needCheque) {
+                cardHistoryService.maskCard(cardResSender);
+                cardHistoryService.maskCard(cardResReceiver);
+                chequeResDto.setChequeIsNeed(true);
+                chequeResDto.setAmount(String.valueOf(transformBalance));
+                chequeResDto.setCommission(String.valueOf(transformBalance * 0.01));
+                chequeResDto.setCardHolderSenderDto(cardResSender.getCardHolder());
+                chequeResDto.setCardHolderReceiverDto(cardResReceiver.getCardHolder());
+                chequeResDto.setSenderCardNumber(cardResSender.getCardNumber());
+                chequeResDto.setReceiverCardNumber(cardResReceiver.getCardNumber());
+            }
+            return chequeResDto;
         } catch (Exception ex) {
             throw new DatabaseException(ex.getMessage());
         }
@@ -196,7 +275,6 @@ public class CardTransactionService implements CardTransactionServiceInterface {
             for (int j = 0; j < quantities.get(i); j++) {
                 cashingNominals.put(nominal, count);
                 amountCollected += nominal;
-                System.out.println("==>Nominal: " + nominal);
                 if (Objects.equals(amountCollected, requiredCashingAmount)) {
                     return cashingNominals;
                 }
@@ -216,29 +294,25 @@ public class CardTransactionService implements CardTransactionServiceInterface {
         return cashingNominals;
     }
 
-    private CashingResDto toCashingResDto(
+    private ChequeResDto toCashingResDto(
             HistoryCard historyCard, boolean isChequeNeed, Map<Integer, Integer> nominalsCount) {
         CardHistoryResDto cardHistoryResDto = cardHistoryMapper.toDto(historyCard);
         cardHistoryService.maskingCardHistory(cardHistoryResDto);
         CardResDto fromCard = cardHistoryResDto.getFromCard();
-        CashingResDto cashingResDto = CashingResDto.builder()
+        ChequeResDto chequeResDto = ChequeResDto.builder()
                 .id(cardHistoryResDto.getId())
                 .transactionTime(cardHistoryResDto.getDate())
                 .message("Cashed successfully")
                 .build();
 
         if (isChequeNeed) {
-            cashingResDto.setChequeIsNeed(true);
-            cashingResDto.setAmount(String.valueOf(cardHistoryResDto.getAmount()));
-            cashingResDto.setCardNumber(fromCard.getCardNumber());
-            cashingResDto.setCashedNominals(nominalsCount);
-            cashingResDto.setCommission(String.valueOf(historyCard.getCommission()));
-            cashingResDto.setCardHolderResDto(fromCard.getCardHolder());
+            chequeResDto.setChequeIsNeed(true);
+            chequeResDto.setAmount(String.valueOf(cardHistoryResDto.getAmount()));
+            chequeResDto.setSenderCardNumber(fromCard.getCardNumber());
+            chequeResDto.setCashedNominals(nominalsCount);
+            chequeResDto.setCommission(String.valueOf(historyCard.getCommission()));
+            chequeResDto.setCardHolderSenderDto(fromCard.getCardHolder());
         }
-        return cashingResDto;
+        return chequeResDto;
     }
-
-
-
-
 }

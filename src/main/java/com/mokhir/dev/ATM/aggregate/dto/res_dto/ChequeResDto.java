@@ -12,9 +12,10 @@ import java.util.Map;
 @NoArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class CashingResDto {
+public class ChequeResDto {
     private Long id;
-    private String cardNumber;
+    private String senderCardNumber;
+    private String receiverCardNumber;
     private String amount;
     private String commission;
     private boolean chequeIsNeed;
@@ -23,5 +24,6 @@ public class CashingResDto {
     private LocalDateTime transactionTime;
     private CurrencyTypeResDto currencyType;
     private Map<Integer, Integer> cashedNominals;
-    private CardHolderResDto cardHolderResDto;
+    private CardHolderResDto cardHolderSenderDto;
+    private CardHolderResDto cardHolderReceiverDto;
 }

@@ -18,6 +18,7 @@ import com.mokhir.dev.ATM.repository.CardTypeRepository;
 import com.mokhir.dev.ATM.service.interfacies.CardServiceInterface;
 import com.mokhir.dev.ATM.service.network.NetworkDataService;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.transaction.Transactional;
 import jakarta.validation.ConstraintViolationException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -46,6 +47,7 @@ public class CardService implements CardServiceInterface<CardReqDto, CardResDto>
 
 
     @Override
+    @Transactional
     public CardResDto createCard(CardReqDto cardReqDto, HttpServletRequest servletRequest) {
         try {
             String ClientInfo = networkDataService.getClientIPv4Address(servletRequest);
@@ -66,12 +68,13 @@ public class CardService implements CardServiceInterface<CardReqDto, CardResDto>
             }
             CardType cardType = byType.get();
             CardHolder cardHolder = byId.get();
+            LocalDate currentDate = LocalDate.now();
+            LocalDate expirationDate = currentDate.plusYears(cardType.getExpirationYear());
             entity.setCardHolder(cardHolder);
             entity.setCheckCardQuantity(3);
             entity.setBalance(0.0);
             entity.setIsActive(true);
-            entity.setCardExpireDate(
-                    LocalDate.now().plusYears(cardType.getExpirationYear()));
+            entity.setCardExpireDate(expirationDate);
             entity.setCardCvc(
                     String.valueOf(ThreadLocalRandom.current().nextInt(111, 999)));
             entity.setCardNumber(

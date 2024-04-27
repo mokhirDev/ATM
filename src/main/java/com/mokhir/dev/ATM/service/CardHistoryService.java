@@ -118,7 +118,7 @@ public class CardHistoryService implements CardHistoryServiceInterface<CardHisto
 
     }
 
-    private CardResDto maskCard(CardResDto cardResDto) {
+    public CardResDto maskCard(CardResDto cardResDto) {
         if (cardResDto == null) {
             return null;
         }
@@ -182,6 +182,21 @@ public class CardHistoryService implements CardHistoryServiceInterface<CardHisto
                 .commission(cashingCommission)
                 .build();
         cardHistoryRepository.save(historyCard);
+        return historyCard;
+    }
+
+    public HistoryCard transform(Card sender, Card receiver, long transformBalance) {
+        BigDecimal amountCashing = BigDecimal.valueOf(transformBalance);
+        BigDecimal cashingCommission = amountCashing.multiply(BigDecimal.valueOf(0.01));
+        HistoryCard historyCard = HistoryCard.builder()
+                .amount(amountCashing)
+                .date(LocalDateTime.now())
+                .fromCard(sender)
+                .toCard(receiver)
+                .commission(cashingCommission)
+                .build();
+        cardHistoryRepository.save(historyCard);
+
         return historyCard;
     }
 }

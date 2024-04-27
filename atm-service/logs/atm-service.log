@@ -424,3 +424,1007 @@
 2024-04-27 12:10:34 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
 2024-04-27 12:10:34 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CashingResDto(id=170, cardNumber=860055******1201, amount=99000.0, commission=1000.0, chequeIsNeed=t (truncated)...]
 2024-04-27 12:10:34 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-27 12:19:35 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/fill", parameters={}
+2024-04-27 12:19:35 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#fill(FillingReqDto, HttpServletRequest)
+2024-04-27 12:19:35 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [FillingReqDto(cardNumber=8600558185691201, cardPin=2020, chequeIsNeed=true, amount=15000)]
+2024-04-27 12:19:35 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 12:19:35 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 12:19:35 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 12:19:35 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 12:19:35 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 12:19:35 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CashingResDto(id=171, cardNumber=860055******1201, amount=14850.0, commission=150.0, chequeIsNeed=tr (truncated)...]
+2024-04-27 12:19:35 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-27 12:19:48 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/money/cash", parameters={}
+2024-04-27 12:19:48 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#cash(CashingReqDto, HttpServletRequest)
+2024-04-27 12:19:48 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CashingReqDto(cardNumber=8600552565545784, cardPin=2020, amount=65000, chequeIsNeed=true, cashingTyp (truncated)...]
+2024-04-27 12:19:48 [http-nio-8080-exec-5] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 12:19:48 [http-nio-8080-exec-5] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 12:19:48 [http-nio-8080-exec-5] INFO  c.mokhir.dev.ATM.service.CardService - Successfully Excluded necessary nominals: 		 {"20000":3,"5000":1}
+2024-04-27 12:19:48 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 12:19:48 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CashingResDto(id=172, cardNumber=860055******5784, amount=65650, commission=656.50, chequeIsNeed=tru (truncated)...]
+2024-04-27 12:19:48 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-27 13:57:20 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m34s782ms500µs400ns).
+2024-04-27 13:58:49 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 13:58:49 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 13:58:49 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 13:59:23 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 22492 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-27 13:59:23 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 13:59:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 13:59:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 107 ms. Found 7 JPA repository interfaces.
+2024-04-27 13:59:24 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 13:59:24 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 13:59:24 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-27 13:59:24 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 13:59:24 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1806 ms
+2024-04-27 13:59:25 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 13:59:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 13:59:25 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@a357c3e
+2024-04-27 13:59:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 13:59:27 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 13:59:27 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-27 13:59:27 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2024-04-27 13:59:28 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-27 13:59:28 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-27 13:59:28 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-27 13:59:28 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 13:59:28 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 5.724 seconds (process running for 7.605)
+2024-04-27 14:02:34 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-27 14:02:34 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-27 14:02:34 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-27 14:02:34 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-27 14:02:34 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-27 14:02:34 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4986b0ea
+2024-04-27 14:02:34 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@237b54bc
+2024-04-27 14:02:34 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-27 14:02:34 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2024-04-27 14:02:34 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - GET "/api/v1/money/transform", parameters={}
+2024-04-27 14:02:34 [http-nio-8080-exec-2] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-27 14:02:34 [http-nio-8080-exec-2] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2024-04-27 14:02:34 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/money/transform.]
+2024-04-27 14:02:34 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2024-04-27 14:02:34 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/error", parameters={}
+2024-04-27 14:02:34 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-04-27 14:02:34 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:02:34 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Sat Apr 27 14:02:34 UZT 2024, status=404, error=Not Found, path=/api/v1/money/transform}]
+2024-04-27 14:02:34 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2024-04-27 14:02:38 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:02:38 [http-nio-8080-exec-3] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler [classpath [META-INF/resources/], classpath [resources/], classpath [static/], classpath [public/], ServletContext [/]]
+2024-04-27 14:02:38 [http-nio-8080-exec-3] DEBUG o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2024-04-27 14:02:38 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource api/v1/money/transform.]
+2024-04-27 14:02:38 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2024-04-27 14:02:38 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for POST "/error", parameters={}
+2024-04-27 14:02:38 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2024-04-27 14:02:38 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:02:38 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Sat Apr 27 14:02:38 UZT 2024, status=404, error=Not Found, path=/api/v1/money/transform}]
+2024-04-27 14:02:38 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2024-04-27 14:02:55 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 14:02:55 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 14:02:55 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 14:03:00 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 9356 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-27 14:03:00 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 14:03:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 14:03:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 105 ms. Found 7 JPA repository interfaces.
+2024-04-27 14:03:02 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 14:03:02 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 14:03:02 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-27 14:03:02 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 14:03:02 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1795 ms
+2024-04-27 14:03:02 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 14:03:02 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 14:03:03 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2e204155
+2024-04-27 14:03:03 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 14:03:04 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 14:03:05 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-27 14:03:05 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2024-04-27 14:03:05 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-27 14:03:05 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-27 14:03:05 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-27 14:03:05 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 14:03:05 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 5.688 seconds (process running for 6.869)
+2024-04-27 14:03:31 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-27 14:03:31 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-27 14:03:31 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-27 14:03:31 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-27 14:03:31 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-27 14:03:31 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@55159007
+2024-04-27 14:03:31 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@77e261e3
+2024-04-27 14:03:31 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-27 14:03:31 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2024-04-27 14:03:31 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:03:31 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:03:31 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600552377598671, cardPin=null, chequeIsNeed=n (truncated)...]
+2024-04-27 14:03:31 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(MethodArgumentNotValidException)
+2024-04-27 14:03:31 [http-nio-8080-exec-2] ERROR c.mokhir.dev.ATM.service.CardService - MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.mokhir.dev.ATM.aggregate.dto.res_dto.CashingResDto> com.mokhir.dev.ATM.controller.CardTransactionController.transform(com.mokhir.dev.ATM.aggregate.dto.req_dto.CardTransformReqDto,jakarta.servlet.http.HttpServletRequest): [Field error in object 'cardTransformReqDto' on field 'cardPin': rejected value [null]; codes [NotBlank.cardTransformReqDto.cardPin,NotBlank.cardPin,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cardTransformReqDto.cardPin,cardPin]; arguments []; default message [cardPin]]; default message [PIN code must not be empty]]  
+2024-04-27 14:03:31 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:03:31 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Error in validation: PIN code must not be empty: field name: cardPin (truncated)...]
+2024-04-27 14:03:31 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.mokhir.dev.ATM.aggregate.dto.res_dto.CashingResDto> com.mokhir.dev.ATM.controller.CardTransactionController.transform(com.mokhir.dev.ATM.aggregate.dto.req_dto.CardTransformReqDto,jakarta.servlet.http.HttpServletRequest): [Field error in object 'cardTransformReqDto' on field 'cardPin': rejected value [null]; codes [NotBlank.cardTransformReqDto.cardPin,NotBlank.cardPin,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cardTransformReqDto.cardPin,cardPin]; arguments []; default message [cardPin]]; default message [PIN code must not be empty]] ]
+2024-04-27 14:03:31 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 14:03:46 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:03:46 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:03:46 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600552377598671, cardPin=null, chequeIsNeed=n (truncated)...]
+2024-04-27 14:03:46 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(MethodArgumentNotValidException)
+2024-04-27 14:03:46 [http-nio-8080-exec-3] ERROR c.mokhir.dev.ATM.service.CardService - MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.mokhir.dev.ATM.aggregate.dto.res_dto.CashingResDto> com.mokhir.dev.ATM.controller.CardTransactionController.transform(com.mokhir.dev.ATM.aggregate.dto.req_dto.CardTransformReqDto,jakarta.servlet.http.HttpServletRequest): [Field error in object 'cardTransformReqDto' on field 'cardPin': rejected value [null]; codes [NotBlank.cardTransformReqDto.cardPin,NotBlank.cardPin,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cardTransformReqDto.cardPin,cardPin]; arguments []; default message [cardPin]]; default message [PIN code must not be empty]]  
+2024-04-27 14:03:46 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:03:46 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Error in validation: PIN code must not be empty: field name: cardPin (truncated)...]
+2024-04-27 14:03:46 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.mokhir.dev.ATM.aggregate.dto.res_dto.CashingResDto> com.mokhir.dev.ATM.controller.CardTransactionController.transform(com.mokhir.dev.ATM.aggregate.dto.req_dto.CardTransformReqDto,jakarta.servlet.http.HttpServletRequest): [Field error in object 'cardTransformReqDto' on field 'cardPin': rejected value [null]; codes [NotBlank.cardTransformReqDto.cardPin,NotBlank.cardPin,NotBlank.java.lang.String,NotBlank]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cardTransformReqDto.cardPin,cardPin]; arguments []; default message [cardPin]]; default message [PIN code must not be empty]] ]
+2024-04-27 14:03:46 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 14:03:53 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:03:53 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:03:53 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600552377598671, cardPin=2020, chequeIsNeed=n (truncated)...]
+2024-04-27 14:03:53 [http-nio-8080-exec-6] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:03:53 [http-nio-8080-exec-6] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:03:53 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 14:03:53 [http-nio-8080-exec-6] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: For input string: "101000.0" 
+2024-04-27 14:03:53 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:03:53 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=For input string: "10 (truncated)...]
+2024-04-27 14:03:53 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: For input string: "101000.0"]
+2024-04-27 14:03:53 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 14:04:45 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:04:45 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:04:45 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600552377598671, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:04:45 [http-nio-8080-exec-8] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:04:45 [http-nio-8080-exec-8] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:04:45 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 14:04:45 [http-nio-8080-exec-8] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: For input string: "101000.0" 
+2024-04-27 14:04:46 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:04:46 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=For input string: "10 (truncated)...]
+2024-04-27 14:04:46 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: For input string: "101000.0"]
+2024-04-27 14:04:46 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 14:04:52 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:04:52 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:04:52 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600552377598671, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:04:52 [http-nio-8080-exec-10] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:04:52 [http-nio-8080-exec-10] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:04:52 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 14:04:52 [http-nio-8080-exec-10] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: For input string: "101000.0" 
+2024-04-27 14:04:52 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:04:52 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=For input string: "10 (truncated)...]
+2024-04-27 14:04:52 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: For input string: "101000.0"]
+2024-04-27 14:04:52 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 14:13:13 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:13:13 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:13:13 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600552377598671, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:13:13 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:13:13 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:13:13 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 14:13:13 [http-nio-8080-exec-2] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: For input string: "101000.0" 
+2024-04-27 14:13:13 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:13:13 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=For input string: "10 (truncated)...]
+2024-04-27 14:13:13 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: For input string: "101000.0"]
+2024-04-27 14:13:13 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 14:14:24 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:14:24 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:14:24 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600552377598671, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:14:24 [http-nio-8080-exec-3] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:14:24 [http-nio-8080-exec-3] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:14:24 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 14:14:24 [http-nio-8080-exec-3] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: For input string: "101000.0" 
+2024-04-27 14:14:24 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:14:24 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=For input string: "10 (truncated)...]
+2024-04-27 14:14:24 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: For input string: "101000.0"]
+2024-04-27 14:14:24 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 14:18:17 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 14:18:17 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 14:18:17 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 14:18:23 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 22780 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-27 14:18:23 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 14:18:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 14:18:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 101 ms. Found 7 JPA repository interfaces.
+2024-04-27 14:18:24 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 14:18:24 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 14:18:24 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-27 14:18:24 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 14:18:24 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1662 ms
+2024-04-27 14:18:25 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 14:18:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 14:18:25 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@a95cb11
+2024-04-27 14:18:25 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 14:18:27 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 14:18:28 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-27 14:18:28 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2024-04-27 14:18:28 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-27 14:18:28 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-27 14:18:28 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-27 14:18:28 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 14:18:28 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 5.955 seconds (process running for 7.023)
+2024-04-27 14:20:12 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-27 14:20:12 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-27 14:20:12 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-27 14:20:12 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-27 14:20:12 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-27 14:20:12 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2a49753
+2024-04-27 14:20:12 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@642b71d6
+2024-04-27 14:20:12 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-27 14:20:12 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-04-27 14:20:12 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:20:12 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:20:12 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600552377598671, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:20:12 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:20:12 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:20:12 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:20:12 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CashingResDto(id=173, cardNumber=null, amount=100000, commission=1000.0, chequeIsNeed=true, cashingT (truncated)...]
+2024-04-27 14:20:12 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-27 14:20:26 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 14:20:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 14:20:26 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 14:20:32 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 17540 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-27 14:20:32 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 14:20:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 14:20:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 96 ms. Found 7 JPA repository interfaces.
+2024-04-27 14:20:34 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 14:20:34 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 14:20:34 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-27 14:20:34 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 14:20:34 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1620 ms
+2024-04-27 14:20:34 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 14:20:34 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 14:20:35 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@13234ac9
+2024-04-27 14:20:35 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 14:20:36 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 14:20:37 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-27 14:20:37 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2024-04-27 14:20:37 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-27 14:20:37 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-27 14:20:37 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-27 14:20:37 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 14:20:37 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 5.756 seconds (process running for 6.913)
+2024-04-27 14:20:58 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 14:20:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 14:20:58 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 14:21:04 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 19696 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-27 14:21:04 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 14:21:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 14:21:05 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 96 ms. Found 7 JPA repository interfaces.
+2024-04-27 14:21:06 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 14:21:06 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 14:21:06 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-27 14:21:06 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 14:21:06 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1648 ms
+2024-04-27 14:21:06 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 14:21:06 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 14:21:06 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@50de907a
+2024-04-27 14:21:06 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 14:21:08 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 14:21:09 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-27 14:21:09 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2024-04-27 14:21:09 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-27 14:21:09 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-27 14:21:09 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-27 14:21:09 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 14:21:09 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 5.64 seconds (process running for 6.708)
+2024-04-27 14:21:59 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-27 14:21:59 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-27 14:21:59 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-27 14:21:59 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-27 14:21:59 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-27 14:21:59 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@2396dc4e
+2024-04-27 14:21:59 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@4f2b1a2f
+2024-04-27 14:21:59 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-27 14:21:59 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2024-04-27 14:21:59 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:21:59 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:22:00 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600552377598671, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:22:00 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:22:00 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:22:00 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:22:00 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CashingResDto(id=174, cardNumber=null, amount=100000, commission=1000.0, chequeIsNeed=true, cashingT (truncated)...]
+2024-04-27 14:22:00 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-27 14:22:51 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:22:51 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:22:51 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600552377598671, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:22:51 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:22:51 [http-nio-8080-exec-2] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:22:51 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:22:51 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CashingResDto(id=175, cardNumber=null, amount=100000, commission=1000.0, chequeIsNeed=true, cashingT (truncated)...]
+2024-04-27 14:22:51 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-27 14:22:56 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:22:56 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:22:56 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600552377598671, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:22:56 [http-nio-8080-exec-4] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:22:56 [http-nio-8080-exec-4] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:22:56 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:22:56 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CashingResDto(id=176, cardNumber=null, amount=100000, commission=1000.0, chequeIsNeed=true, cashingT (truncated)...]
+2024-04-27 14:22:56 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-27 14:23:00 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:23:00 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:23:00 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600552377598671, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:23:00 [http-nio-8080-exec-5] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:23:00 [http-nio-8080-exec-5] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:23:00 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 14:23:00 [http-nio-8080-exec-5] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: Not enough funds, in your balance 
+2024-04-27 14:23:00 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:23:00 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=Not enough funds, in  (truncated)...]
+2024-04-27 14:23:00 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: Not enough funds, in your balance]
+2024-04-27 14:23:00 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 14:23:00 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:23:00 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:23:00 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600552377598671, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:23:00 [http-nio-8080-exec-8] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:23:00 [http-nio-8080-exec-8] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:23:00 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 14:23:00 [http-nio-8080-exec-8] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: Not enough funds, in your balance 
+2024-04-27 14:23:00 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:23:00 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=Not enough funds, in  (truncated)...]
+2024-04-27 14:23:00 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: Not enough funds, in your balance]
+2024-04-27 14:23:00 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 14:23:17 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:23:17 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:23:17 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600552377598671, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:23:17 [http-nio-8080-exec-9] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:23:17 [http-nio-8080-exec-9] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:23:17 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:23:17 [http-nio-8080-exec-9] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CashingResDto(id=177, cardNumber=null, amount=50000, commission=500.0, chequeIsNeed=true, cashingTyp (truncated)...]
+2024-04-27 14:23:17 [http-nio-8080-exec-9] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-27 14:26:47 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 14:26:47 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 14:26:47 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 14:26:52 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 288 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-27 14:26:52 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 14:26:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 14:26:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 88 ms. Found 7 JPA repository interfaces.
+2024-04-27 14:26:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 14:26:54 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 14:26:54 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-27 14:26:54 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 14:26:54 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1568 ms
+2024-04-27 14:26:55 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 14:26:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 14:26:55 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@42ff9a77
+2024-04-27 14:26:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 14:26:56 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 14:26:57 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-27 14:26:57 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2024-04-27 14:26:57 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-27 14:26:57 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-27 14:26:57 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-27 14:26:57 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 14:26:57 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 5.525 seconds (process running for 6.627)
+2024-04-27 14:27:14 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-27 14:27:14 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-27 14:27:14 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-27 14:27:14 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-27 14:27:14 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-27 14:27:14 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@628cb8e0
+2024-04-27 14:27:14 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@4767be27
+2024-04-27 14:27:14 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-27 14:27:14 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2024-04-27 14:27:14 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:27:14 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:27:14 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600552377598671, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:27:14 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:27:14 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:27:14 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 14:27:14 [http-nio-8080-exec-1] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: You can't transform from the current card to the same card! 
+2024-04-27 14:27:14 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:27:14 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=You can't transform f (truncated)...]
+2024-04-27 14:27:14 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: You can't transform from the current card to the same card!]
+2024-04-27 14:27:14 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 14:27:33 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 14:27:33 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 14:27:33 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 14:27:39 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 16324 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-27 14:27:39 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 14:27:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 14:27:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 7 JPA repository interfaces.
+2024-04-27 14:27:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 14:27:41 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 14:27:41 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-27 14:27:41 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 14:27:41 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1531 ms
+2024-04-27 14:27:41 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 14:27:41 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 14:27:41 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@47fa3671
+2024-04-27 14:27:41 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 14:27:43 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 14:27:43 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-27 14:27:43 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2024-04-27 14:27:44 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-27 14:27:44 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-27 14:27:44 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-27 14:27:44 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 14:27:44 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 5.326 seconds (process running for 6.336)
+2024-04-27 14:27:54 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-27 14:27:54 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-27 14:27:54 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-27 14:27:54 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-27 14:27:54 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-27 14:27:54 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@455cb6d9
+2024-04-27 14:27:54 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@258291de
+2024-04-27 14:27:54 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-27 14:27:54 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2024-04-27 14:27:54 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:27:54 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:27:54 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600552377598671, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:27:54 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:27:54 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:27:54 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 14:27:54 [http-nio-8080-exec-1] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: You can't transform from the current card to the same card! 
+2024-04-27 14:27:54 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:27:54 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=You can't transform f (truncated)...]
+2024-04-27 14:27:54 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: You can't transform from the current card to the same card!]
+2024-04-27 14:27:54 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 14:28:05 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 14:28:05 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 14:28:05 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 14:28:11 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 7472 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-27 14:28:11 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 14:28:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 14:28:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 88 ms. Found 7 JPA repository interfaces.
+2024-04-27 14:28:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 14:28:13 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 14:28:13 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-27 14:28:13 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 14:28:13 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1538 ms
+2024-04-27 14:28:13 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 14:28:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 14:28:13 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@60f662bd
+2024-04-27 14:28:13 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 14:28:15 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 14:28:15 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-27 14:28:16 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2024-04-27 14:28:16 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-27 14:28:16 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-27 14:28:16 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-27 14:28:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 14:28:16 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 5.334 seconds (process running for 6.352)
+2024-04-27 14:28:24 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-27 14:28:24 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-27 14:28:24 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-27 14:28:24 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-27 14:28:24 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-27 14:28:24 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@6d7a343f
+2024-04-27 14:28:24 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@3ae91bcc
+2024-04-27 14:28:24 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-27 14:28:24 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2024-04-27 14:28:24 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:28:24 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:28:24 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600552377598671, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:28:24 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:28:24 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:28:24 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 14:28:24 [http-nio-8080-exec-1] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: Not enough funds, in your balance 
+2024-04-27 14:28:24 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:28:24 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=Not enough funds, in  (truncated)...]
+2024-04-27 14:28:24 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: Not enough funds, in your balance]
+2024-04-27 14:28:24 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 14:28:38 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:28:38 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:28:38 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600552377598671, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:28:38 [http-nio-8080-exec-4] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:28:38 [http-nio-8080-exec-4] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:28:38 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:28:38 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CashingResDto(id=178, cardNumber=null, amount=20000, commission=200.0, chequeIsNeed=true, cashingTyp (truncated)...]
+2024-04-27 14:28:38 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-27 14:30:09 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:30:09 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:30:09 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600552377598671, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:30:09 [http-nio-8080-exec-7] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:30:09 [http-nio-8080-exec-7] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:30:09 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:30:09 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CashingResDto(id=179, cardNumber=null, amount=20000, commission=200.0, chequeIsNeed=true, cashingTyp (truncated)...]
+2024-04-27 14:30:09 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-27 14:30:19 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:30:19 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:30:19 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600558185691201, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:30:19 [http-nio-8080-exec-10] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:30:19 [http-nio-8080-exec-10] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:30:19 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 14:30:19 [http-nio-8080-exec-10] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: You can't transform from the current card to the same card! 
+2024-04-27 14:30:19 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:30:19 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=You can't transform f (truncated)...]
+2024-04-27 14:30:19 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: You can't transform from the current card to the same card!]
+2024-04-27 14:30:19 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 14:32:09 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:32:09 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:32:09 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600552565545784, cardTo=8600558551134134, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:32:09 [http-nio-8080-exec-8] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:32:09 [http-nio-8080-exec-8] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:32:09 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:32:09 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [CashingResDto(id=180, cardNumber=null, amount=20000, commission=200.0, chequeIsNeed=true, cashingTyp (truncated)...]
+2024-04-27 14:32:09 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-27 14:43:57 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 14:43:57 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 14:43:57 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 14:44:12 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 13332 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-27 14:44:12 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 14:44:13 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 14:44:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 174 ms. Found 7 JPA repository interfaces.
+2024-04-27 14:44:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 14:44:15 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 14:44:15 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-27 14:44:15 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 14:44:15 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3068 ms
+2024-04-27 14:44:16 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 14:44:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 14:44:16 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6cd2cb2
+2024-04-27 14:44:16 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 14:44:19 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 14:44:20 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-27 14:44:21 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2024-04-27 14:44:21 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-27 14:44:21 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-27 14:44:21 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-27 14:44:21 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 14:44:21 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 10.96 seconds (process running for 13.269)
+2024-04-27 14:44:29 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-27 14:44:29 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-27 14:44:29 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-27 14:44:29 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-27 14:44:29 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-27 14:44:29 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@771ede0d
+2024-04-27 14:44:29 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@3328db4f
+2024-04-27 14:44:29 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-27 14:44:29 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2024-04-27 14:44:29 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:44:29 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:44:29 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600552565545784, cardTo=8600558551134134, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:44:29 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:44:29 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:44:30 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:44:30 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ChequeResDto(id=181, senderCardNumber=860055******4134, receiverCardNumber=860055******5784, amount= (truncated)...]
+2024-04-27 14:44:30 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-27 14:45:16 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:45:16 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:45:16 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600552565545784, cardTo=8600558551134134, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:45:16 [http-nio-8080-exec-3] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:45:16 [http-nio-8080-exec-3] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:45:16 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:45:16 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ChequeResDto(id=182, senderCardNumber=860055******4134, receiverCardNumber=860055******5784, amount= (truncated)...]
+2024-04-27 14:45:16 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-27 14:46:07 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 14:46:07 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 14:46:07 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600558185691201, cardTo=8600557679903626, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 14:46:07 [http-nio-8080-exec-4] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 14:46:07 [http-nio-8080-exec-4] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 14:46:07 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 14:46:07 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ChequeResDto(id=183, senderCardNumber=860055******3626, receiverCardNumber=860055******1201, amount= (truncated)...]
+2024-04-27 14:46:07 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-27 14:57:31 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 14:57:31 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 14:57:31 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 14:57:48 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 17044 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-27 14:57:48 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 14:57:49 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 14:57:50 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 196 ms. Found 7 JPA repository interfaces.
+2024-04-27 14:57:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 14:57:51 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 14:57:51 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-27 14:57:51 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 14:57:51 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3520 ms
+2024-04-27 14:57:53 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 14:57:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 14:57:53 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@30af23fd
+2024-04-27 14:57:53 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 14:57:57 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 14:58:00 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-27 14:58:00 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2024-04-27 14:58:01 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-27 14:58:01 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-27 14:58:02 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-27 14:58:03 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 14:58:03 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 16.076 seconds (process running for 19.082)
+2024-04-27 14:58:37 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 14:58:37 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 14:58:37 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 14:58:51 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 20332 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-27 14:58:51 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 14:58:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 14:58:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 175 ms. Found 7 JPA repository interfaces.
+2024-04-27 14:58:54 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 14:58:54 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 14:58:54 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-27 14:58:54 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 14:58:54 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3157 ms
+2024-04-27 14:58:55 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 14:58:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 14:58:55 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@c6a692e
+2024-04-27 14:58:55 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 14:58:58 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 14:59:00 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-27 14:59:00 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2024-04-27 14:59:00 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-27 14:59:00 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-27 14:59:00 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-27 14:59:01 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 14:59:01 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 11.138 seconds (process running for 13.902)
+2024-04-27 15:01:36 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-27 15:01:36 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-27 15:01:36 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-27 15:01:36 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-27 15:01:36 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-27 15:01:36 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5fdff4f1
+2024-04-27 15:01:36 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@189f3ccd
+2024-04-27 15:01:36 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-27 15:01:36 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2024-04-27 15:01:36 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 15:01:36 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 15:01:36 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600552377598671, cardTo=8600554342194016, cardPin=2020, chequeIsNeed=t (truncated)...]
+2024-04-27 15:01:36 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 15:01:36 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 15:01:37 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 15:01:37 [http-nio-8080-exec-1] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: Card pin does not match 
+2024-04-27 15:01:37 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 15:01:37 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=Card pin does not mat (truncated)...]
+2024-04-27 15:01:37 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: Card pin does not match]
+2024-04-27 15:01:37 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 15:02:01 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 15:02:01 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 15:02:01 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600552377598671, cardTo=8600554342194016, cardPin=2222, chequeIsNeed=t (truncated)...]
+2024-04-27 15:02:01 [http-nio-8080-exec-5] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 15:02:01 [http-nio-8080-exec-5] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 15:02:01 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 15:02:01 [http-nio-8080-exec-5] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: No enum constant com.mokhir.dev.ATM.aggregate.enums.CardTypeName.VISA 
+2024-04-27 15:02:01 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 15:02:01 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=No enum constant com. (truncated)...]
+2024-04-27 15:02:01 [http-nio-8080-exec-5] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: No enum constant com.mokhir.dev.ATM.aggregate.enums.CardTypeName.VISA]
+2024-04-27 15:02:01 [http-nio-8080-exec-5] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 15:02:22 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 15:02:22 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 15:02:22 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 15:02:34 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 17768 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-27 15:02:34 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 15:02:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 15:02:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 117 ms. Found 7 JPA repository interfaces.
+2024-04-27 15:02:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 15:02:36 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 15:02:36 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-27 15:02:36 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 15:02:36 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2222 ms
+2024-04-27 15:02:37 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 15:02:37 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 15:02:38 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4b343b6d
+2024-04-27 15:02:38 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 15:02:39 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 15:02:40 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-27 15:02:40 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2024-04-27 15:02:40 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-27 15:02:41 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-27 15:02:41 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-27 15:02:41 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 15:02:41 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 8.573 seconds (process running for 11.474)
+2024-04-27 15:02:51 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-27 15:02:51 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-27 15:02:51 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-27 15:02:51 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-27 15:02:51 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-27 15:02:51 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@140fa482
+2024-04-27 15:02:51 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2eb0932c
+2024-04-27 15:02:51 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-27 15:02:51 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2024-04-27 15:02:51 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 15:02:51 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 15:02:51 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600552377598671, cardTo=8600554342194016, cardPin=2222, chequeIsNeed=t (truncated)...]
+2024-04-27 15:02:51 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 15:02:51 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 15:02:52 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 15:02:52 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ChequeResDto(id=185, senderCardNumber=860055******4016, receiverCardNumber=860055******8671, amount= (truncated)...]
+2024-04-27 15:02:52 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-27 15:03:57 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 15:03:57 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 15:03:57 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 15:04:10 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 21944 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-27 15:04:10 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 15:04:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 15:04:12 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 179 ms. Found 7 JPA repository interfaces.
+2024-04-27 15:04:13 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 15:04:13 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 15:04:13 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-27 15:04:13 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 15:04:13 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3084 ms
+2024-04-27 15:04:15 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 15:04:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 15:04:15 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@11574592
+2024-04-27 15:04:15 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 15:04:18 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 15:04:19 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-27 15:04:19 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2024-04-27 15:04:20 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-27 15:04:20 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-27 15:04:20 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-27 15:04:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 15:04:20 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 10.914 seconds (process running for 13.243)
+2024-04-27 15:04:26 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-27 15:04:26 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-27 15:04:26 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-27 15:04:26 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-27 15:04:26 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-27 15:04:26 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@277dddcf
+2024-04-27 15:04:26 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@53202b06
+2024-04-27 15:04:26 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-27 15:04:26 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+2024-04-27 15:04:26 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 15:04:26 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 15:04:27 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600552377598671, cardTo=8600554342194016, cardPin=2222, chequeIsNeed=t (truncated)...]
+2024-04-27 15:04:27 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 15:04:27 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 15:04:27 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 15:04:27 [http-nio-8080-exec-1] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: You can't transform to another card type 
+2024-04-27 15:04:27 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 15:04:27 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=You can't transform t (truncated)...]
+2024-04-27 15:04:27 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: You can't transform to another card type]
+2024-04-27 15:04:27 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 15:04:36 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 15:04:36 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 15:04:36 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600552377598671, cardTo=860055434219402s6, cardPin=2222, chequeIsNeed= (truncated)...]
+2024-04-27 15:04:36 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(MethodArgumentNotValidException)
+2024-04-27 15:04:36 [http-nio-8080-exec-3] ERROR c.mokhir.dev.ATM.service.CardService - MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.mokhir.dev.ATM.aggregate.dto.res_dto.ChequeResDto> com.mokhir.dev.ATM.controller.CardTransactionController.transform(com.mokhir.dev.ATM.aggregate.dto.req_dto.CardTransformReqDto,jakarta.servlet.http.HttpServletRequest) with 2 errors: [Field error in object 'cardTransformReqDto' on field 'cardTo': rejected value [860055434219402s6]; codes [Positive.cardTransformReqDto.cardTo,Positive.cardTo,Positive.java.lang.String,Positive]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cardTransformReqDto.cardTo,cardTo]; arguments []; default message [cardTo]]; default message [card number must be positive value]] [Field error in object 'cardTransformReqDto' on field 'cardTo': rejected value [860055434219402s6]; codes [Pattern.cardTransformReqDto.cardTo,Pattern.cardTo,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cardTransformReqDto.cardTo,cardTo]; arguments []; default message [cardTo],[Ljakarta.validation.constraints.Pattern$Flag;@126bd7d2,\d{16}]; default message [Card number of receiver must contain exactly 16 digits]]  
+2024-04-27 15:04:36 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 15:04:36 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Error in validation: card number must be positive value: field name: (truncated)...]
+2024-04-27 15:04:36 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.mokhir.dev.ATM.aggregate.dto.res_dto.ChequeResDto> com.mokhir.dev.ATM.controller.CardTransactionController.transform(com.mokhir.dev.ATM.aggregate.dto.req_dto.CardTransformReqDto,jakarta.servlet.http.HttpServletRequest) with 2 errors: [Field error in object 'cardTransformReqDto' on field 'cardTo': rejected value [860055434219402s6]; codes [Positive.cardTransformReqDto.cardTo,Positive.cardTo,Positive.java.lang.String,Positive]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cardTransformReqDto.cardTo,cardTo]; arguments []; default message [cardTo]]; default message [card number must be positive value]] [Field error in object 'cardTransformReqDto' on field 'cardTo': rejected value [860055434219402s6]; codes [Pattern.cardTransformReqDto.cardTo,Pattern.cardTo,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cardTransformReqDto.cardTo,cardTo]; arguments []; default message [cardTo],[Ljakarta.validation.constraints.Pattern$Flag;@126bd7d2,\d{16}]; default message [Card number of receiver must contain exactly 16 digits]] ]
+2024-04-27 15:04:36 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 15:04:40 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 15:04:40 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 15:04:40 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600552377598671, cardTo=860055434219402226, cardPin=2222, chequeIsNeed (truncated)...]
+2024-04-27 15:04:40 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(MethodArgumentNotValidException)
+2024-04-27 15:04:40 [http-nio-8080-exec-6] ERROR c.mokhir.dev.ATM.service.CardService - MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.mokhir.dev.ATM.aggregate.dto.res_dto.ChequeResDto> com.mokhir.dev.ATM.controller.CardTransactionController.transform(com.mokhir.dev.ATM.aggregate.dto.req_dto.CardTransformReqDto,jakarta.servlet.http.HttpServletRequest): [Field error in object 'cardTransformReqDto' on field 'cardTo': rejected value [860055434219402226]; codes [Pattern.cardTransformReqDto.cardTo,Pattern.cardTo,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cardTransformReqDto.cardTo,cardTo]; arguments []; default message [cardTo],[Ljakarta.validation.constraints.Pattern$Flag;@126bd7d2,\d{16}]; default message [Card number of receiver must contain exactly 16 digits]]  
+2024-04-27 15:04:40 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 15:04:40 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Error in validation: Card number of receiver must contain exactly 16 (truncated)...]
+2024-04-27 15:04:40 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.mokhir.dev.ATM.aggregate.dto.res_dto.ChequeResDto> com.mokhir.dev.ATM.controller.CardTransactionController.transform(com.mokhir.dev.ATM.aggregate.dto.req_dto.CardTransformReqDto,jakarta.servlet.http.HttpServletRequest): [Field error in object 'cardTransformReqDto' on field 'cardTo': rejected value [860055434219402226]; codes [Pattern.cardTransformReqDto.cardTo,Pattern.cardTo,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cardTransformReqDto.cardTo,cardTo]; arguments []; default message [cardTo],[Ljakarta.validation.constraints.Pattern$Flag;@126bd7d2,\d{16}]; default message [Card number of receiver must contain exactly 16 digits]] ]
+2024-04-27 15:04:40 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 15:04:41 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 15:04:41 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 15:04:41 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600552377598671, cardTo=86005543421940226, cardPin=2222, chequeIsNeed= (truncated)...]
+2024-04-27 15:04:41 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(MethodArgumentNotValidException)
+2024-04-27 15:04:41 [http-nio-8080-exec-7] ERROR c.mokhir.dev.ATM.service.CardService - MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.mokhir.dev.ATM.aggregate.dto.res_dto.ChequeResDto> com.mokhir.dev.ATM.controller.CardTransactionController.transform(com.mokhir.dev.ATM.aggregate.dto.req_dto.CardTransformReqDto,jakarta.servlet.http.HttpServletRequest): [Field error in object 'cardTransformReqDto' on field 'cardTo': rejected value [86005543421940226]; codes [Pattern.cardTransformReqDto.cardTo,Pattern.cardTo,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cardTransformReqDto.cardTo,cardTo]; arguments []; default message [cardTo],[Ljakarta.validation.constraints.Pattern$Flag;@126bd7d2,\d{16}]; default message [Card number of receiver must contain exactly 16 digits]]  
+2024-04-27 15:04:41 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 15:04:41 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Error in validation: Card number of receiver must contain exactly 16 (truncated)...]
+2024-04-27 15:04:41 [http-nio-8080-exec-7] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [0] in public org.springframework.http.ResponseEntity<com.mokhir.dev.ATM.aggregate.dto.res_dto.ChequeResDto> com.mokhir.dev.ATM.controller.CardTransactionController.transform(com.mokhir.dev.ATM.aggregate.dto.req_dto.CardTransformReqDto,jakarta.servlet.http.HttpServletRequest): [Field error in object 'cardTransformReqDto' on field 'cardTo': rejected value [86005543421940226]; codes [Pattern.cardTransformReqDto.cardTo,Pattern.cardTo,Pattern.java.lang.String,Pattern]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [cardTransformReqDto.cardTo,cardTo]; arguments []; default message [cardTo],[Ljakarta.validation.constraints.Pattern$Flag;@126bd7d2,\d{16}]; default message [Card number of receiver must contain exactly 16 digits]] ]
+2024-04-27 15:04:41 [http-nio-8080-exec-7] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 15:04:44 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 15:04:44 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 15:04:44 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600552377598671, cardTo=8600554342194026, cardPin=2222, chequeIsNeed=t (truncated)...]
+2024-04-27 15:04:44 [http-nio-8080-exec-10] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 15:04:44 [http-nio-8080-exec-10] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 15:04:44 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 15:04:44 [http-nio-8080-exec-10] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: Cannot invoke "com.mokhir.dev.ATM.aggregate.entity.Card.getIsActive()" because "byCardNumberReceiver" is null 
+2024-04-27 15:04:44 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 15:04:44 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=Cannot invoke "com.mo (truncated)...]
+2024-04-27 15:04:44 [http-nio-8080-exec-10] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: Cannot invoke "com.mokhir.dev.ATM.aggregate.entity.Card.getIsActive()" because "byCardNumberReceiver" is null]
+2024-04-27 15:04:44 [http-nio-8080-exec-10] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 15:04:49 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 15:04:49 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 15:04:49 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600552377598671, cardTo=8600552377598671, cardPin=2222, chequeIsNeed=t (truncated)...]
+2024-04-27 15:04:49 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 15:04:49 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 15:04:49 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 15:04:49 [http-nio-8080-exec-1] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: You can't transform from the current card to the same card! 
+2024-04-27 15:04:49 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 15:04:49 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=You can't transform f (truncated)...]
+2024-04-27 15:04:49 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: You can't transform from the current card to the same card!]
+2024-04-27 15:04:49 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 15:05:04 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/money/transform", parameters={}
+2024-04-27 15:05:04 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardTransactionController#transform(CardTransformReqDto, HttpServletRequest)
+2024-04-27 15:05:04 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardTransformReqDto(cardFrom=8600552377598671, cardTo=8600556948411029, cardPin=2222, chequeIsNeed=t (truncated)...]
+2024-04-27 15:05:04 [http-nio-8080-exec-3] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 15:05:04 [http-nio-8080-exec-3] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 15:05:04 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 15:05:04 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ChequeResDto(id=186, senderCardNumber=860055******1029, receiverCardNumber=860055******8671, amount= (truncated)...]
+2024-04-27 15:05:04 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2024-04-27 15:10:54 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/card/create", parameters={}
+2024-04-27 15:10:54 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#create(CardReqDto, HttpServletRequest)
+2024-04-27 15:10:54 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardReqDto(id=null, cardPin=5555, userId=9, cardTypeId=11)]
+2024-04-27 15:10:54 [http-nio-8080-exec-8] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 15:10:54 [http-nio-8080-exec-8] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 15:10:54 [http-nio-8080-exec-8] ERROR c.mokhir.dev.ATM.service.CardService - CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @765d7657
+2024-04-27 15:10:54 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 15:10:54 [http-nio-8080-exec-8] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @765d7657 
+2024-04-27 15:10:54 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 15:10:54 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=CardService: createCa (truncated)...]
+2024-04-27 15:10:54 [http-nio-8080-exec-8] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @765d7657]
+2024-04-27 15:10:54 [http-nio-8080-exec-8] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 15:15:29 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 15:15:29 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 15:15:30 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 15:15:41 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 20668 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-27 15:15:41 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 15:15:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 15:15:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 172 ms. Found 7 JPA repository interfaces.
+2024-04-27 15:15:44 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 15:15:44 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 15:15:44 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-27 15:15:44 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 15:15:44 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3000 ms
+2024-04-27 15:15:45 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 15:15:45 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 15:15:45 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@350d26f3
+2024-04-27 15:15:45 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 15:15:48 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 15:15:49 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-27 15:15:49 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2024-04-27 15:15:50 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-27 15:15:50 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-27 15:15:50 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-27 15:15:50 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 15:15:50 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 10.505 seconds (process running for 12.532)
+2024-04-27 15:16:56 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-27 15:16:56 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-27 15:16:56 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-27 15:16:56 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-27 15:16:56 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-27 15:16:56 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1e9e4468
+2024-04-27 15:16:56 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@8bd9d08
+2024-04-27 15:16:56 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-27 15:16:56 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2024-04-27 15:16:56 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/card/create", parameters={}
+2024-04-27 15:16:56 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#create(CardReqDto, HttpServletRequest)
+2024-04-27 15:16:57 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardReqDto(id=null, cardPin=5555, userId=9, cardTypeId=11)]
+2024-04-27 15:16:57 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 15:16:57 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 15:16:57 [http-nio-8080-exec-1] ERROR c.mokhir.dev.ATM.service.CardService - CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @765d7657
+2024-04-27 15:16:57 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 15:16:57 [http-nio-8080-exec-1] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @765d7657 
+2024-04-27 15:16:57 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 15:16:57 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=CardService: createCa (truncated)...]
+2024-04-27 15:16:57 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @765d7657]
+2024-04-27 15:16:57 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 15:32:33 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 15:32:33 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 15:32:33 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 15:32:40 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 624 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-27 15:32:40 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 15:32:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 15:32:42 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 221 ms. Found 7 JPA repository interfaces.
+2024-04-27 15:32:44 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 15:32:44 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 15:32:44 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-27 15:32:44 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 15:32:44 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3764 ms
+2024-04-27 15:32:45 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 15:32:45 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 15:32:46 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4756e5cc
+2024-04-27 15:32:46 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 15:32:49 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 15:32:50 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-27 15:32:51 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2024-04-27 15:32:51 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-27 15:32:51 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-27 15:32:51 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-27 15:32:51 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 15:32:51 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 12.479 seconds (process running for 14.54)
+2024-04-27 15:33:14 [http-nio-8080-exec-3] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-27 15:33:14 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-27 15:33:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-27 15:33:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-27 15:33:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-27 15:33:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@4f4b7a2e
+2024-04-27 15:33:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2027d56f
+2024-04-27 15:33:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-27 15:33:14 [http-nio-8080-exec-3] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2024-04-27 15:33:14 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/card/create", parameters={}
+2024-04-27 15:33:14 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#create(CardReqDto, HttpServletRequest)
+2024-04-27 15:33:15 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardReqDto(id=null, cardPin=5555, userId=9, cardTypeId=11)]
+2024-04-27 15:33:15 [http-nio-8080-exec-3] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 15:33:15 [http-nio-8080-exec-3] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 15:33:15 [http-nio-8080-exec-3] ERROR c.mokhir.dev.ATM.service.CardService - CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @765d7657
+2024-04-27 15:33:15 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 15:33:15 [http-nio-8080-exec-3] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @765d7657 
+2024-04-27 15:33:15 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 15:33:15 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=CardService: createCa (truncated)...]
+2024-04-27 15:33:15 [http-nio-8080-exec-3] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @765d7657]
+2024-04-27 15:33:15 [http-nio-8080-exec-3] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 15:34:00 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/card/create", parameters={}
+2024-04-27 15:34:00 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#create(CardReqDto, HttpServletRequest)
+2024-04-27 15:34:00 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardReqDto(id=null, cardPin=5555, userId=9, cardTypeId=11)]
+2024-04-27 15:34:00 [http-nio-8080-exec-4] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 15:34:00 [http-nio-8080-exec-4] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 15:34:00 [http-nio-8080-exec-4] ERROR c.mokhir.dev.ATM.service.CardService - CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @765d7657
+2024-04-27 15:34:00 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 15:34:00 [http-nio-8080-exec-4] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @765d7657 
+2024-04-27 15:34:00 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 15:34:00 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=CardService: createCa (truncated)...]
+2024-04-27 15:34:00 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @765d7657]
+2024-04-27 15:34:00 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 15:34:18 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 15:34:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 15:34:18 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 15:34:29 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 3236 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-27 15:34:29 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 15:34:31 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 15:34:31 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 175 ms. Found 7 JPA repository interfaces.
+2024-04-27 15:34:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 15:34:32 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 15:34:32 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-27 15:34:33 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 15:34:33 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3164 ms
+2024-04-27 15:34:34 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 15:34:34 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 15:34:34 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@315b5913
+2024-04-27 15:34:34 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 15:34:37 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 15:34:38 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-27 15:34:38 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2024-04-27 15:34:39 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-27 15:34:39 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-27 15:34:39 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-27 15:34:39 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 15:34:39 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 10.935 seconds (process running for 13.081)
+2024-04-27 15:35:55 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-27 15:35:55 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-27 15:35:55 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-27 15:35:55 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-27 15:35:55 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-27 15:35:55 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@628cb8e0
+2024-04-27 15:35:55 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@4767be27
+2024-04-27 15:35:55 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-27 15:35:55 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 10 ms
+2024-04-27 15:35:55 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/card/create", parameters={}
+2024-04-27 15:35:55 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#create(CardReqDto, HttpServletRequest)
+2024-04-27 15:35:55 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardReqDto(id=null, cardPin=5555, userId=9, cardTypeId=11)]
+2024-04-27 15:35:55 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 15:35:55 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 15:35:56 [http-nio-8080-exec-1] ERROR c.mokhir.dev.ATM.service.CardService - CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @618b19ad
+2024-04-27 15:35:56 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 15:35:56 [http-nio-8080-exec-1] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @618b19ad 
+2024-04-27 15:35:56 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 15:35:56 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=CardService: createCa (truncated)...]
+2024-04-27 15:35:56 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @618b19ad]
+2024-04-27 15:35:56 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 15:36:06 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/card/create", parameters={}
+2024-04-27 15:36:06 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#create(CardReqDto, HttpServletRequest)
+2024-04-27 15:36:06 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardReqDto(id=null, cardPin=5555, userId=9, cardTypeId=11)]
+2024-04-27 15:36:06 [http-nio-8080-exec-4] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 15:36:06 [http-nio-8080-exec-4] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 15:36:06 [http-nio-8080-exec-4] ERROR c.mokhir.dev.ATM.service.CardService - CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @618b19ad
+2024-04-27 15:36:06 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 15:36:06 [http-nio-8080-exec-4] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @618b19ad 
+2024-04-27 15:36:06 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 15:36:06 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=CardService: createCa (truncated)...]
+2024-04-27 15:36:06 [http-nio-8080-exec-4] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @618b19ad]
+2024-04-27 15:36:06 [http-nio-8080-exec-4] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 15:36:07 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/card/create", parameters={}
+2024-04-27 15:36:07 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#create(CardReqDto, HttpServletRequest)
+2024-04-27 15:36:07 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardReqDto(id=null, cardPin=5555, userId=9, cardTypeId=11)]
+2024-04-27 15:36:07 [http-nio-8080-exec-6] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 15:36:07 [http-nio-8080-exec-6] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 15:36:07 [http-nio-8080-exec-6] ERROR c.mokhir.dev.ATM.service.CardService - CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @618b19ad
+2024-04-27 15:36:07 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 15:36:07 [http-nio-8080-exec-6] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @618b19ad 
+2024-04-27 15:36:07 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 15:36:07 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=CardService: createCa (truncated)...]
+2024-04-27 15:36:07 [http-nio-8080-exec-6] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @618b19ad]
+2024-04-27 15:36:07 [http-nio-8080-exec-6] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
+2024-04-27 15:36:41 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 15:36:41 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-04-27 15:36:41 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2024-04-27 15:37:16 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Starting AtmApplication using Java 17.0.11 with PID 23424 (C:\Users\moxir\IdeaProjects\ATM\target\classes started by moxir in C:\Users\moxir\IdeaProjects\ATM)
+2024-04-27 15:37:16 [main] INFO  com.mokhir.dev.ATM.AtmApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-27 15:37:18 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-27 15:37:19 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 176 ms. Found 7 JPA repository interfaces.
+2024-04-27 15:37:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-04-27 15:37:20 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-04-27 15:37:20 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2024-04-27 15:37:20 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-04-27 15:37:20 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3804 ms
+2024-04-27 15:37:21 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-27 15:37:21 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-04-27 15:37:22 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6eaa6b0c
+2024-04-27 15:37:22 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-04-27 15:37:25 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-27 15:37:26 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-27 15:37:27 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 20 mappings in 'requestMappingHandlerMapping'
+2024-04-27 15:37:27 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2024-04-27 15:37:27 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2024-04-27 15:37:27 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 1 @ExceptionHandler, 1 ResponseBodyAdvice
+2024-04-27 15:37:27 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2024-04-27 15:37:27 [main] INFO  com.mokhir.dev.ATM.AtmApplication - Started AtmApplication in 13.682 seconds (process running for 17.968)
+2024-04-27 15:38:12 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-27 15:38:12 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-04-27 15:38:12 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+2024-04-27 15:38:12 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+2024-04-27 15:38:12 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+2024-04-27 15:38:12 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1fd73dcb
+2024-04-27 15:38:12 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@4f9e9c21
+2024-04-27 15:38:12 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+2024-04-27 15:38:12 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2024-04-27 15:38:12 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - POST "/api/v1/card/create", parameters={}
+2024-04-27 15:38:13 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.mokhir.dev.ATM.controller.CardController#create(CardReqDto, HttpServletRequest)
+2024-04-27 15:38:13 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [CardReqDto(id=null, cardPin=5555, userId=9, cardTypeId=11)]
+2024-04-27 15:38:13 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client host : 		 "192.168.68.173"
+2024-04-27 15:38:13 [http-nio-8080-exec-1] INFO  c.mokhir.dev.ATM.service.CardService - Client IP :  		 "localhost"
+2024-04-27 15:38:13 [http-nio-8080-exec-1] ERROR c.mokhir.dev.ATM.service.CardService - CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @443118b0
+2024-04-27 15:38:13 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Using @ExceptionHandler com.mokhir.dev.ATM.exceptions.controller.ExceptionController#on(DatabaseException)
+2024-04-27 15:38:13 [http-nio-8080-exec-1] ERROR c.mokhir.dev.ATM.service.CardService - DatabaseException: CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @443118b0 
+2024-04-27 15:38:13 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+2024-04-27 15:38:13 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [ErrorResponse(code=400, message=Some thing went wrong, issue in Database, meta=CardService: createCa (truncated)...]
+2024-04-27 15:38:13 [http-nio-8080-exec-1] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.mokhir.dev.ATM.exceptions.DatabaseException: CardService: createCard: Unable to make field private final int java.time.LocalDate.year accessible: module java.base does not "opens java.time" to unnamed module @443118b0]
+2024-04-27 15:38:13 [http-nio-8080-exec-1] DEBUG o.s.web.servlet.DispatcherServlet - Completed 400 BAD_REQUEST
