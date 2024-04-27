@@ -12,11 +12,10 @@ import java.util.Map;
 @NoArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class CashingResDto {
+public class FillingResDto {
     private Long id;
     private String cardNumber;
     private String amount;
-    private String commission;
     private boolean chequeIsNeed;
     private Long cashingTypeId;
     private String message;

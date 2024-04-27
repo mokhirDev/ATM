@@ -2,18 +2,16 @@ package com.mokhir.dev.ATM.service;
 
 import com.google.gson.Gson;
 import com.mokhir.dev.ATM.aggregate.dto.req_dto.CardHistoryReqDto;
-import com.mokhir.dev.ATM.aggregate.dto.req_dto.CashingReqDto;
 import com.mokhir.dev.ATM.aggregate.dto.res_dto.CardHistoryResDto;
 import com.mokhir.dev.ATM.aggregate.dto.res_dto.CardHolderResDto;
 import com.mokhir.dev.ATM.aggregate.dto.res_dto.CardResDto;
-import com.mokhir.dev.ATM.aggregate.dto.res_dto.CashingResDto;
 import com.mokhir.dev.ATM.aggregate.entity.Card;
 import com.mokhir.dev.ATM.aggregate.entity.HistoryCard;
 import com.mokhir.dev.ATM.exceptions.DatabaseException;
-import com.mokhir.dev.ATM.exceptions.NotFoundException;
 import com.mokhir.dev.ATM.mapper.CardHistoryMapper;
 import com.mokhir.dev.ATM.mapper.CardHolderMapper;
 import com.mokhir.dev.ATM.mapper.CardMapper;
+import com.mokhir.dev.ATM.repository.BankNoteRepository;
 import com.mokhir.dev.ATM.repository.CardHistoryRepository;
 import com.mokhir.dev.ATM.repository.CardRepository;
 import com.mokhir.dev.ATM.service.interfacies.CardHistoryServiceInterface;
@@ -28,7 +26,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 @Service
@@ -42,6 +39,7 @@ public class CardHistoryService implements CardHistoryServiceInterface<CardHisto
     private final CardMapper cardMapper;
     private final CardHistoryMapper cardHistoryMapper;
     private final CardHolderMapper cardHolderMapper;
+    private final BankNoteRepository bankNoteRepository;
 
     @Override
     @Transactional
@@ -65,20 +63,16 @@ public class CardHistoryService implements CardHistoryServiceInterface<CardHisto
         }
     }
 
-    public HistoryCard cashing(Card card, Long amount) {
+    public HistoryCard cashing(Long amount) {
         try {
             BigDecimal amountCashing = BigDecimal.valueOf(amount);
             BigDecimal cashingCommission = amountCashing.multiply(BigDecimal.valueOf(0.01));
             HistoryCard historyCard = HistoryCard.builder()
                     .amount(amountCashing)
                     .date(LocalDateTime.now())
-                    .fromCard(card)
-                    .toCard(null)
                     .commission(cashingCommission)
                     .build();
             cardHistoryRepository.save(historyCard);
-            BigDecimal sumCashing = amountCashing.add(cashingCommission);
-            card.setBalance(card.getBalance() - Double.parseDouble(String.valueOf(sumCashing)));
             return historyCard;
         } catch (Exception ex) {
             throw new DatabaseException(ex.getMessage());
@@ -91,7 +85,7 @@ public class CardHistoryService implements CardHistoryServiceInterface<CardHisto
                     .getFromCard()
                     .getCardHolder());
             CardHolderResDto cardHolderToRes = cardHolderMapper.toDto(cardHistory
-                    .getFromCard()
+                    .getToCard()
                     .getCardHolder());
 
             CardResDto fromCardRes = cardMapper.toDto(cardHistory.getFromCard());
@@ -171,4 +165,23 @@ public class CardHistoryService implements CardHistoryServiceInterface<CardHisto
     }
 
 
+    public HistoryCard fill(Card fillingCard, long amount,
+                            HttpServletRequest servletRequest) {
+        String ClientInfo = networkDataService.getClientIPv4Address(servletRequest);
+        String ClientIP = networkDataService.getRemoteUserInfo(servletRequest);
+        LOG.info("Client host : \t\t {}", gson.toJson(ClientInfo));
+        LOG.info("Client IP :  \t\t {}", gson.toJson(ClientIP));
+
+        BigDecimal amountCashing = BigDecimal.valueOf(amount);
+        BigDecimal cashingCommission = amountCashing.multiply(BigDecimal.valueOf(0.01));
+        HistoryCard historyCard = HistoryCard.builder()
+                .amount(amountCashing)
+                .date(LocalDateTime.now())
+                .toCard(fillingCard)
+                .date(LocalDateTime.now())
+                .commission(cashingCommission)
+                .build();
+        cardHistoryRepository.save(historyCard);
+        return historyCard;
+    }
 }
