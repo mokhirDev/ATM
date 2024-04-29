@@ -31,14 +31,14 @@ public class AtmCardHolderApplication {
 
 | No |                                                                       Services                                                                        | Status |
 |:--:|:-----------------------------------------------------------------------------------------------------------------------------------------------------:|:------:|
-| 1  | [Card Holder Service](https://github.com/QodirovHudoberdi/ATM-service/blob/master/src/main/java/com/company/controller/CardHolderController.java) |   ✅    |
-| 2  |   [BankNote  Service](https://github.com/QodirovHudoberdi/ATM-service/blob/master/src/main/java/com/company/controller/BankNoteController.java)   |   ✅    |
-| 3  |       [Card Service](https://github.com/QodirovHudoberdi/ATM-service/blob/master/src/main/java/com/company/controller/CardController.java)        |   ✅    |
-| 4  |    [Cashing Service](https://github.com/QodirovHudoberdi/ATM-service/blob/master/src/main/java/com/company/controller/CashingController.java)     |   ✅    |
-| 5  |  [Fill Out  Card Service](https://github.com/QodirovHudoberdi/ATM-service/blob/master/src/main/java/com/company/controller/CardController.java)   |   ✅    |
-| 6  |     [Transfer Service ](https://github.com/QodirovHudoberdi/ATM-service/blob/master/src/main/java/com/company/controller/CardController.java)     |   ✅    |
-| 7  |     [Card Type Service](https://github.com/QodirovHudoberdi/ATM-service/blob/master/src/main/java/com/company/controller/CardController.java)     |   ✅    |
-| 8  |     [Get Card History](https://github.com/QodirovHudoberdi/ATM-service/blob/master/src/main/java/com/company/controller/CardController.java)      |   ✅    |
+| 1  | [Card Holder Service](https://github.com/mokhirDev/ATM/blob/master/src/main/java/com/mokhir/dev/ATM/service/CardHolderService.java) |   ✅    |
+| 2  |   [BankNote  Service](https://github.com/mokhirDev/ATM/blob/master/src/main/java/com/mokhir/dev/ATM/service/BankNoteService.java)   |   ✅    |
+| 3  |       [Card Service](https://github.com/mokhirDev/ATM/blob/master/src/main/java/com/mokhir/dev/ATM/service/CardService.java)        |   ✅    |
+| 4  |    [Cashing Service](https://github.com/mokhirDev/ATM/blob/master/src/main/java/com/mokhir/dev/ATM/service/CashingTypeService.java)     |   ✅    |
+| 5  |  [Fill Out  Card Service](https://github.com/mokhirDev/ATM/blob/master/src/main/java/com/mokhir/dev/ATM/service/CardTransactionService.java)   |   ✅    |
+| 6  |     [Transfer Service ](https://github.com/mokhirDev/ATM/blob/master/src/main/java/com/mokhir/dev/ATM/service/CardTransactionService.java)     |   ✅    |
+| 7  |     [Card Type Service](https://github.com/mokhirDev/ATM/blob/master/src/main/java/com/mokhir/dev/ATM/service/CardTypeService.java)     |   ✅    |
+| 8  |     [Get Card History](https://github.com/mokhirDev/ATM/blob/master/src/main/java/com/mokhir/dev/ATM/service/CardHistoryService.java)      |   ✅    |
 
 
 >>>>>>> origin/master
