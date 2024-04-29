@@ -41,4 +41,3 @@ public class AtmCardHolderApplication {
 | 8  |     [Get Card History](https://github.com/mokhirDev/ATM/blob/master/src/main/java/com/mokhir/dev/ATM/service/CardHistoryService.java)      |   ✅    |
 
 
->>>>>>> origin/master
