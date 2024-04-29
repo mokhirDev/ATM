@@ -27,8 +27,7 @@ public class AtmCardHolderApplication {
 }
 ***You can get the services listed above in this table through the links***
 ```
-
-
+***You can get the services listed above in this table through the links***
 | No |                                                                       Services                                                                        | Status |
 |:--:|:-----------------------------------------------------------------------------------------------------------------------------------------------------:|:------:|
 | 1  | [Card Holder Service](https://github.com/mokhirDev/ATM/blob/master/src/main/java/com/mokhir/dev/ATM/service/CardHolderService.java) |   ✅    |
@@ -40,4 +39,6 @@ public class AtmCardHolderApplication {
 | 7  |     [Card Type Service](https://github.com/mokhirDev/ATM/blob/master/src/main/java/com/mokhir/dev/ATM/service/CardTypeService.java)     |   ✅    |
 | 8  |     [Get Card History](https://github.com/mokhirDev/ATM/blob/master/src/main/java/com/mokhir/dev/ATM/service/CardHistoryService.java)      |   ✅    |
 
+>>>>>>> origin/master
 
+```
