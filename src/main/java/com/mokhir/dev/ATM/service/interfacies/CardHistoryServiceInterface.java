@@ -1,9 +1,9 @@
 package com.mokhir.dev.ATM.service.interfacies;
 
 import jakarta.servlet.http.HttpServletRequest;
-
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 public interface CardHistoryServiceInterface<Req, Res> {
-    List<Res> getCardHistory(Req req, HttpServletRequest request);
+    Page<Res> getCardHistory(Req req, HttpServletRequest request, Pageable pageable);
 }

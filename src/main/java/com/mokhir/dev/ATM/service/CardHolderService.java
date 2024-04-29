@@ -29,17 +29,33 @@ public class CardHolderService implements CardHolderServiceInterface<CardHolderR
     private final NetworkDataService networkDataService;
     private static final Logger LOG = LoggerFactory.getLogger(CardService.class);
 
+    /**
+     * Creates a new card holder based on the provided information.
+     *
+     * @param cardHolderReqDto The request DTO containing card holder details.
+     * @param servletRequest   The HTTP servlet request (used for client information).
+     * @return The created card holder as a {@link CardHolderResDto}.
+     * @throws DataIntegrityViolationException if there's a data integrity violation during creation.
+     * @throws ConstraintViolationException    if there's a constraint violation during creation.
+     * @throws DatabaseException               if there's an issue with saving the card holder.
+     */
     @Override
     public CardHolderResDto createCardHolder(CardHolderReqDto cardHolderReqDto, HttpServletRequest servletRequest) {
         try {
-            String ClientInfo = networkDataService.getClientIPv4Address(servletRequest);
-            String ClientIP = networkDataService.getRemoteUserInfo(servletRequest);
-            LOG.info("Client host : \t\t {}", gson.toJson(ClientInfo));
-            LOG.info("Client IP :  \t\t {}", gson.toJson(ClientIP));
+            // Get client information
+            String clientInfo = networkDataService.getClientIPv4Address(servletRequest);
+            String clientIP = networkDataService.getRemoteUserInfo(servletRequest);
+            LOG.info("Client host: {}", gson.toJson(clientInfo));
+            LOG.info("Client IP: {}", gson.toJson(clientIP));
 
+            // Convert request DTO to entity
             CardHolder entity = cardHolderMapper.toEntity(cardHolderReqDto);
             entity.setPassportSeries(entity.getPassportSeries().toUpperCase());
+
+            // Save the card holder
             cardHolderRepository.save(entity);
+
+            // Convert entity to response DTO
             CardHolderResDto dto = cardHolderMapper.toDto(entity);
             LOG.info("Cardholder successfully created: {}", dto);
             return dto;
@@ -52,20 +68,40 @@ public class CardHolderService implements CardHolderServiceInterface<CardHolderR
         }
     }
 
+
+    /**
+     * Updates an existing card holder based on the provided information.
+     *
+     * @param updateDto       The request DTO containing updated card holder details.
+     * @param servletRequest  The HTTP servlet request (used for client information).
+     * @return The updated card holder as a {@link CardHolderResDto}.
+     * @throws NotFoundException if the requested card holder is not found.
+     * @throws DataIntegrityViolationException if there's a data integrity violation during update.
+     * @throws ConstraintViolationException if there's a constraint violation during update.
+     * @throws DatabaseException if there's an issue with saving the updated card holder.
+     */
     public CardHolderResDto updateCardHolder(CardHolderReqDto updateDto, HttpServletRequest servletRequest) {
         try {
-            String ClientInfo = networkDataService.getClientIPv4Address(servletRequest);
-            String ClientIP = networkDataService.getRemoteUserInfo(servletRequest);
-            LOG.info("Client host : \t\t {}", gson.toJson(ClientInfo));
-            LOG.info("Client IP :  \t\t {}", gson.toJson(ClientIP));
+            // Get client information
+            String clientInfo = networkDataService.getClientIPv4Address(servletRequest);
+            String clientIP = networkDataService.getRemoteUserInfo(servletRequest);
+            LOG.info("Client host: {}", gson.toJson(clientInfo));
+            LOG.info("Client IP: {}", gson.toJson(clientIP));
 
+            // Retrieve card holder by ID
             Optional<CardHolder> byId = cardHolderRepository.findById(updateDto.getId());
             if (byId.isEmpty()) {
-                throw new NotFoundException("User not found with id:%d".formatted(updateDto.getId()));
+                throw new NotFoundException("User not found with id: %d".formatted(updateDto.getId()));
             }
             CardHolder cardHolder = byId.get();
+
+            // Update card holder details
             cardHolderMapper.updateFromDto(updateDto, cardHolder);
+
+            // Save the updated card holder
             cardHolderRepository.save(cardHolder);
+
+            // Convert entity to response DTO
             CardHolderResDto dto = cardHolderMapper.toDto(cardHolder);
             LOG.info("CardHolder updated successfully: {}", dto.toString());
             return dto;
@@ -74,7 +110,8 @@ public class CardHolderService implements CardHolderServiceInterface<CardHolderR
         } catch (ConstraintViolationException ex) {
             throw new ConstraintViolationException(ex.getConstraintViolations());
         } catch (Exception ex) {
-            throw new DatabaseException("CardHolderService: createCardHolder: " + ex.getMessage());
+            throw new DatabaseException("CardHolderService: updateCardHolder: " + ex.getMessage());
         }
     }
+
 }

@@ -33,6 +33,16 @@ public class CardTypeService implements CardTypeInterface<CardTypeReqDto, CardTy
     private static final Logger LOG = LoggerFactory.getLogger(CardService.class);
 
 
+    /**
+     * Creates a new card type based on the provided request DTO.
+     *
+     * @param cardTypeReqDto The DTO containing the details of the card type to be created.
+     * @param servletRequest The HTTP servlet request.
+     * @return               A CardTypeResDto object representing the newly created card type.
+     * @throws DataIntegrityViolationException if there is a violation of data integrity constraints.
+     * @throws ConstraintViolationException    if there is a constraint violation.
+     * @throws DatabaseException              if an error occurs while interacting with the database.
+     */
     @Override
     public CardTypeResDto create(CardTypeReqDto cardTypeReqDto, HttpServletRequest servletRequest) {
         try {
@@ -54,11 +64,12 @@ public class CardTypeService implements CardTypeInterface<CardTypeReqDto, CardTy
             return cardTypeMapper.toDto(save);
         } catch (DataIntegrityViolationException ex) {
             throw new DataIntegrityViolationException(ex.getMessage(), ex.getCause());
-        }catch (ConstraintViolationException ex){
+        } catch (ConstraintViolationException ex) {
             throw new ConstraintViolationException(ex.getConstraintViolations());
         } catch (Exception ex) {
             LOG.error("CardTypeService: create: {}", ex.getMessage());
             throw new DatabaseException("CardTypeService: create: " + ex.getMessage());
         }
     }
+
 }

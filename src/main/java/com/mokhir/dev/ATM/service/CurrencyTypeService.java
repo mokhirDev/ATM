@@ -32,6 +32,16 @@ public class CurrencyTypeService implements CurrencyTypeInterface<CurrencyTypeRe
     private static final Logger LOG = LoggerFactory.getLogger(CardService.class);
 
 
+    /**
+     * Creates a new currency type based on the provided request DTO.
+     *
+     * @param currencyTypeReqDto The DTO containing the details of the currency type to be created.
+     * @param servletRequest     The HTTP servlet request.
+     * @return                   A CurrencyTypeResDto object representing the newly created currency type.
+     * @throws DataIntegrityViolationException if there is a violation of data integrity constraints.
+     * @throws ConstraintViolationException    if there is a constraint violation.
+     * @throws DatabaseException              if an error occurs while interacting with the database.
+     */
     @Override
     public CurrencyTypeResDto create(CurrencyTypeReqDto currencyTypeReqDto, HttpServletRequest servletRequest) {
         try {
@@ -54,6 +64,15 @@ public class CurrencyTypeService implements CurrencyTypeInterface<CurrencyTypeRe
         }
     }
 
+
+    /**
+     * Retrieves all currency types with pagination.
+     *
+     * @param pageable         Pagination information.
+     * @param servletRequest   The HTTP servlet request.
+     * @return                 A Page object containing CurrencyTypeResDto objects representing currency types.
+     * @throws DatabaseException if an error occurs while interacting with the database.
+     */
     public Page<CurrencyTypeResDto> findAll(Pageable pageable, HttpServletRequest servletRequest) {
         try {
             String ClientInfo = networkDataService.getClientIPv4Address(servletRequest);
@@ -70,6 +89,16 @@ public class CurrencyTypeService implements CurrencyTypeInterface<CurrencyTypeRe
         }
     }
 
+
+    /**
+     * Deletes a currency type by its ID.
+     *
+     * @param id               The ID of the currency type to delete.
+     * @param servletRequest   The HTTP servlet request.
+     * @return                 The CurrencyTypeResDto object representing the deleted currency type.
+     * @throws NotFoundException   if the currency type with the specified ID is not found.
+     * @throws DatabaseException    if an error occurs while interacting with the database.
+     */
     public CurrencyTypeResDto deleteById(Long id, HttpServletRequest servletRequest) {
         try {
             String ClientInfo = networkDataService.getClientIPv4Address(servletRequest);
@@ -90,6 +119,16 @@ public class CurrencyTypeService implements CurrencyTypeInterface<CurrencyTypeRe
         }
     }
 
+
+    /**
+     * Updates a currency type by its ID.
+     *
+     * @param reqDto            The CurrencyTypeReqDto object containing the updated information.
+     * @param servletRequest    The HTTP servlet request.
+     * @return                  The CurrencyTypeResDto object representing the updated currency type.
+     * @throws NotFoundException    if the currency type with the specified ID is not found.
+     * @throws DatabaseException     if an error occurs while interacting with the database.
+     */
     public CurrencyTypeResDto updateById(CurrencyTypeReqDto reqDto, HttpServletRequest servletRequest) {
         try {
             String ClientInfo = networkDataService.getClientIPv4Address(servletRequest);
@@ -111,4 +150,5 @@ public class CurrencyTypeService implements CurrencyTypeInterface<CurrencyTypeRe
             throw new DatabaseException("CardTypeService: updateById: " + ex.getMessage());
         }
     }
+
 }

@@ -24,6 +24,14 @@ public class CashingTypeService implements CashingTypeServiceInterface<CashingTy
     private final CashingTypeMapper cashingTypeMapper;
     private static final Logger LOG = LoggerFactory.getLogger(CardService.class);
 
+    /**
+     * Creates a new cashing type based on the provided request DTO.
+     *
+     * @param cashingTypeReqDto The DTO containing the details of the cashing type to be created.
+     * @param servletRequest    The HTTP servlet request.
+     * @return                  A CashingTypeResDto object representing the newly created cashing type.
+     * @throws DatabaseException if an error occurs while interacting with the database.
+     */
     @Override
     public CashingTypeResDto create(CashingTypeReqDto cashingTypeReqDto, HttpServletRequest servletRequest) {
         try {
@@ -39,5 +47,6 @@ public class CashingTypeService implements CashingTypeServiceInterface<CashingTy
             throw new DatabaseException(ex.getMessage());
         }
     }
+
 
 }
